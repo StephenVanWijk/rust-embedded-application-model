@@ -1,0 +1,11 @@
+{
+    // Override the default setting (`cargo check --all-targets`) which produces the following error
+    // "can't find crate for `test`" when the default compilation target is a no_std target
+    // with these changes RA will call `cargo check --bins` on save
+    "rust-analyzer.check.allTargets": false,
+    "rust-analyzer.check.extraArgs": ["--bins"],
+    "rust-analyzer.server.extraEnv": {
+        "RUST_TARGET_PATH": "${workspaceFolder}/.cargo"
+    },
+    // "cortex-debug.armToolchainPath": "C:\\Users\\Hp\\.cargo\\bin"
+}
