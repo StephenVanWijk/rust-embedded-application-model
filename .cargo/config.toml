@@ -1,29 +1,16 @@
 [build]
-# No default target set here (specify per-project or via `--target`)
+target = "thumbv7em-none-eabihf"
 
-# Use rust-lld for all bare-metal targets (ARM, RISC-V, etc.)
-[target.'cfg(all(target_os = "none", not(target_arch = "avr")))']
-linker = "rust-lld"
-rustflags = [
-    "-C", "link-arg=-Tlink.x",  # Default linker script (override per-project)
-]
-
-# Special case for AVR (does not use rust-lld)
-[target.avr-unknown-gnu-atmega328]
-linker = "avr-gcc"  # AVR requires GCC linker
-
-# Example for RISC-V
-[target.riscv32imc-unknown-none-elf]
+# ARM target settings
+[target.thumbv7em-none-eabihf]
+runner = "probe-rs run --chip STM32F303VCTx" 
+# runner = "arm-none-eabi-gdb -q -x ../openocd.gdb"
 linker = "rust-lld"
 rustflags = [
     "-C", "link-arg=-Tlink.x",
-    "-C", "linker-plugin-lto",
+    "-C", "linker-flavor=ld.lld",
 ]
 
-# Example for 
-
-[target.xtensa-esp32-none-elf]
-linker = "ld"  # ESP32 uses its own custom ld
-rustflags = [
-    "-C", "link-arg=-Tlink.x",
-]
+# Reset flags for host builds
+[target.'cfg(windows)']
+rustflags = []
