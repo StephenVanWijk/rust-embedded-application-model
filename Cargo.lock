@@ -224,7 +224,6 @@ dependencies = [
  "cortex-m 0.6.7",
  "cortex-m-rt",
  "panic-itm",
- "rustc_version 0.4.1",
  "stm32f3-discovery",
 ]
 

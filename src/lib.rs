@@ -12,6 +12,5 @@ pub use cortex_m::{asm::bkpt, iprint, iprintln, peripheral::ITM};
 
 pub fn init() -> ITM {
     let p = cortex_m::Peripherals::take().unwrap();
-
     p.ITM
 }
