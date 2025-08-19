@@ -1,3 +1,4 @@
+
 #![no_std]
 #![no_main]
 
@@ -15,14 +16,14 @@ fn main() -> ! {
     let mut gpioe = dp.GPIOE.split(&mut rcc.ahb);
     
     // Configure PE8 (North LED) as output
-    let mut led = gpioe.pe9.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
+    let mut led = gpioe.pe11.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
     
     loop {
         // Toggle LED state
         let _ = led.toggle();
         
         // Simple busy-wait delay
-        for _ in 0..1_000_000 {
+        for _ in 0..30_000 {
             cortex_m::asm::nop();
         }
     }
