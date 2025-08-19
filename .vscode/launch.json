@@ -1,12 +1,21 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "PowerShell: Launch Current File",
-      "type": "PowerShell",
-      "request": "launch",
-      "script": "${file}",
-      "cwd": "${fileDirname}"
-    }
-  ]
+    "version": "0.2.0",
+    "$schema": "https://raw.githubusercontent.com/Marus/cortex-debug/master/package.json",
+    "configurations": [
+        {
+            "name": "Debug STM32 (OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/rust-embedded-application-model",
+            // \target\thumbv7em-none-eabihf\debug\rust-embedded-application-model: C:\Users\Hp\rust-embedded-application-model\build.rs C:\Users\Hp\rust-embedded-application-model\link C:\Users\Hp\rust-embedded-application-model\memory.x C:\Users\Hp\rust-embedded-application-model\src\lib.rs C:\Users\Hp\rust-embedded-application-model\src\main.rs
+            "device": "STM32F3x",
+            "configFiles": [
+                "${env:USERPROFILE}/scoop/apps/openocd/current/share/openocd/scripts/interface/stlink.cfg",
+                "${env:USERPROFILE}/scoop/apps/openocd/current/share/openocd/scripts/target/stm32f3x.cfg"
+            ],
+            "preLaunchTask": "cargo build"
+        }
+    ]
 }
