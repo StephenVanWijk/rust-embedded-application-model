@@ -4,7 +4,7 @@
 
 use panic_itm as _; // panic handler
 use cortex_m_rt::entry;
-use stm32f3_discovery::stm32f3xx_hal::{prelude::*, stm32, gpio::GpioExt};
+use stm32f3_discovery::stm32f3xx_hal::{prelude::*, stm32, gpio::GpioExt, rcc};
 
 #[entry]
 fn main() -> ! {
@@ -16,7 +16,7 @@ fn main() -> ! {
     let mut gpioe = dp.GPIOE.split(&mut rcc.ahb);
     
     // Configure PE8 (North LED) as output
-    let mut led = gpioe.pe11.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
+    let mut led = gpioe.pe12.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
     
     loop {
         // Toggle LED state
