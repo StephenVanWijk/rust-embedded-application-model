@@ -7,7 +7,7 @@
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "openocd",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/openocd",
             "executable": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/rust-embedded-application-model",
             // \target\thumbv7em-none-eabihf\debug\rust-embedded-application-model: C:\Users\Hp\rust-embedded-application-model\build.rs C:\Users\Hp\rust-embedded-application-model\link C:\Users\Hp\rust-embedded-application-model\memory.x C:\Users\Hp\rust-embedded-application-model\src\lib.rs C:\Users\Hp\rust-embedded-application-model\src\main.rs
             "device": "STM32F3x",
