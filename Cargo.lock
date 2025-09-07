@@ -185,6 +185,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8d5439c4ad607c3c23abf66de8c8bf57ba8adcd1f129e699851a6e43935d339d"
 
 [[package]]
+name = "panic-halt"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a513e167849a384b7f9b746e517604398518590a9142f4846a32e3c2a4de7b11"
+
+[[package]]
 name = "panic-itm"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -223,8 +229,10 @@ version = "0.1.0"
 dependencies = [
  "cortex-m 0.6.7",
  "cortex-m-rt",
+ "panic-halt",
  "panic-itm",
  "stm32f3-discovery",
+ "switch-hal 0.4.0",
 ]
 
 [[package]]
@@ -306,7 +314,7 @@ dependencies = [
  "cortex-m-rt",
  "lsm303dlhc",
  "stm32f3xx-hal",
- "switch-hal",
+ "switch-hal 0.3.3",
 ]
 
 [[package]]
@@ -332,6 +340,15 @@ name = "switch-hal"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1c0119e6288918ff211d773db9132b0d7582f058cc2d2c0b38dd4aa953c09873"
+dependencies = [
+ "embedded-hal",
+]
+
+[[package]]
+name = "switch-hal"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "90a4adc8cbd1726249b161898e48e0f3f1ce74d34dc784cbbc98fba4ed283fbf"
 dependencies = [
  "embedded-hal",
 ]

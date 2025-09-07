@@ -1,50 +1,61 @@
 #![no_std]
 #![no_main]
 
+extern crate panic_itm;
+
+use core::cell::RefCell;
+use core::ops::DerefMut;
+
+use cortex_m::interrupt::{free, Mutex};
+
 use cortex_m_rt::entry;
-use panic_itm as _;
-use stm32f3_discovery::stm32f3xx_hal::{prelude::*, gpio::GpioExt, delay::Delay, pac};
-use stm32f3_discovery::leds::Leds;
-use stm32f3_discovery::switch_hal::{ToggleableOutputSwitch};
+
+use stm32f3_discovery::stm32f3xx_hal::prelude::*;
+use stm32f3_discovery::stm32f3xx_hal::timer::{Event, Timer};
+use stm32f3_discovery::stm32f3xx_hal::pac;
+use stm32f3_discovery::wait_for_interrupt;
+
+use pac::{interrupt, Interrupt};
+
+use switch_hal::{ToggleableOutputSwitch, IntoSwitch};
+
+
+static TIM: Mutex<RefCell<Option<Timer<pac::TIM7>>>> = Mutex::new(RefCell::new(None));
+
+#[interrupt]
+fn TIM7() {
+    free(|cs| {
+        if let Some(ref mut tim7) = TIM.borrow(cs).borrow_mut().deref_mut() {
+            // tim7.clear_event(Event::Update);
+            tim7.clear_update_interrupt_flag();
+        }
+    });
+}
 
 #[entry]
 fn main() -> ! {
-    let device_periphs = pac::Peripherals::take().unwrap();
-    let mut reset_and_clock_control = device_periphs.RCC.constrain();
+    let peripherals = stm32f3_discovery::stm32f3xx_hal::pac::Peripherals::take().unwrap();
+    let mut flash = peripherals.FLASH.constrain();
+    let mut rcc = peripherals.RCC.constrain();
 
-    let core_periphs = cortex_m::Peripherals::take().unwrap();
-    let mut flash = device_periphs.FLASH.constrain();
-    let clocks = reset_and_clock_control.cfgr.freeze(&mut flash.acr);
-    let mut delay = Delay::new(core_periphs.SYST, clocks);
+    let clocks = rcc.cfgr.freeze(&mut flash.acr);
+    let mut timer = Timer::new(peripherals.TIM7, clocks, &mut rcc.apb1);
+    timer.start(500u32.milliseconds());
+    timer.enable_interrupt(Event::Update);
+    free(|cs| {
+        TIM.borrow(cs).replace(Some(timer));
+    });
 
-    // initialize user leds
-    let mut gpioe = device_periphs.GPIOE.split(&mut reset_and_clock_control.ahb);
-    let leds = Leds::new(
-        gpioe.pe8,
-        gpioe.pe9,
-        gpioe.pe10,
-        gpioe.pe11,
-        gpioe.pe12,
-        gpioe.pe13,
-        gpioe.pe14,
-        gpioe.pe15,
-        &mut gpioe.moder,
-        &mut gpioe.otyper,
-    );
+    let mut gpio = peripherals.GPIOE.split(&mut rcc.ahb);
+    let pin = gpio.pe9.into_push_pull_output(&mut gpio.moder, &mut gpio.otyper);
+    let mut led = pin.into_active_high_switch();
 
-    let mut led_array = [leds.ld3, leds.ld5, leds.ld7, leds.ld9, leds.ld10, leds.ld8, leds.ld6, leds.ld4];
-    let compass_delay = 50u16;
+    unsafe {
+       pac::NVIC::unmask(Interrupt::TIM7);
+    }    
     
     loop {
-        for led in led_array.iter_mut() {
-            led.toggle().ok();
-            delay.delay_ms(compass_delay);
-            led.toggle().ok();
-            delay.delay_ms(compass_delay);
-        }
+        led.toggle().ok();
+        wait_for_interrupt();
     }
 }
-
-// use stm32f3_discovery::stm32f3xx_hal::{prelude::*, stm32, gpio::GpioExt};
-// use stm32f3_discovery::stm32f3xx_hal::prelude::*;
-// use stm32f3_discovery::switch_hal::{OutputSwitch, ToggleableOutputSwitch};
