@@ -1,0 +1,5 @@
+[protocol]
+swd = true
+
+[reset]
+reset_type = "HW"  # Force hardware reset

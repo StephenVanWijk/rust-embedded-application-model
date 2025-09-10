@@ -2,11 +2,15 @@
 #![no_main]
 
 use stm32f3_discovery::leds::Leds;
-use stm32f3_discovery::stm32f3xx_hal::{prelude::*, gpio::GpioExt, delay::Delay, pac, timer::{Event, Timer}};
+use stm32f3_discovery::stm32f3xx_hal::{prelude::*, gpio::GpioExt, delay::Delay, pac};
 use stm32f3_discovery::switch_hal::{ToggleableOutputSwitch};
 
 extern crate panic_itm;
 
+use cortex_m_rt::entry;
+
+
+#[entry]
 fn main() -> !{
         let device_periphs = pac::Peripherals::take().unwrap();
     let mut rcc = device_periphs.RCC.constrain();
