@@ -1,0 +1,20 @@
+set log_output to "STM32F303_PCB_KanbanDPE_20250910_1510.log"
+  cortex_m smp_gdb
+gdb
+  gdb breakpoint_override ('hard'|'soft'|'disable')
+  gdb flash_program ('enable'|'disable')
+  gdb memory_map ('enable'|'disable')
+  gdb port [port_num]
+  gdb report_data_abort ('enable'|'disable')
+  gdb report_register_access_error ('enable'|'disable')
+  gdb save_tdesc
+  gdb sync
+  gdb target_description ('enable'|'disable')
+  stm32f3x.cpu arp_halt_gdb
+    stm32f3x.cpu cortex_m smp_gdb
+  tcl port [port_num]
+  telnet port [port_num]
+.\openocd\openocd.cfg:16: Error: 
+Traceback (most recent call last):
+  File ".\openocd\openocd.cfg", line 16, in script
+    gdb set architecture arm

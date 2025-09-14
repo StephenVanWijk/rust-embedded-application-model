@@ -1,0 +1,22 @@
+set log_output to "STM32F303_PCB_KanbanDPE_20250910_1339.log"
+adapter speed: 950 kHz
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : STLINK V2J37M26 (API v2) VID:PID 0483:374B
+Info : Target voltage: 2.917842
+Info : clock speed 950 kHz
+Info : stlink_dap_op_connect(connect)
+Info : SWD DPIDR 0x2ba01477
+Error: [stm32f3x.cpu] Examination failed
+Warn : target stm32f3x.cpu examination failed
+Info : [stm32f3x.cpu] starting gdb server on 3333
+Info : Listening on port 3333 for gdb connections
+Info : accepting 'gdb' connection on tcp/3333
+Error: Target not examined yet
+Error: [stm32f3x.cpu] Execution of event gdb-attach failed:
+
+Error: Target not examined yet
+Error: auto_probe failed
+Error: Connect failed. Consider setting up a gdb-attach event for the target to prepare target for GDB connect, or use 'gdb_memory_map disable'.
+Error: attempted 'gdb' connection rejected
+shutdown command invoked
