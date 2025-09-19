@@ -4,7 +4,6 @@
 // 20250907 1354CET SDvW, KanbanDPE
 // STM32F303 PCB KanbanDPE 20250906
 // STM32F303 Rust Embedded Code 20250906 1208CET SDvW dag 2
-//
 // extern crate panic_itm; 
 // Has the same effect as:
 use panic_itm as _; 

@@ -1,0 +1,282 @@
+User : 7 27 options.c:53 configuration_output_handler(): set log_output to "STM32F303_PCB_KanbanDPE_20250918_Day1_1335_DEBUG.log"User : 8 27 options.c:53 configuration_output_handler(): 
+Debug: 9 27 options.c:357 parse_cmdline_args(): ARGV[0] = "C:\Program Files (x86)\OpenOCD-20250710-0.12.0\bin\openocd.exe"
+Debug: 10 28 options.c:357 parse_cmdline_args(): ARGV[1] = "-f"
+Debug: 11 28 options.c:357 parse_cmdline_args(): ARGV[2] = ".\openocd\openocd.cfg"
+Debug: 12 28 options.c:357 parse_cmdline_args(): ARGV[3] = "-d3"
+Debug: 13 29 options.c:357 parse_cmdline_args(): ARGV[4] = "-l"
+Debug: 14 29 options.c:357 parse_cmdline_args(): ARGV[5] = "STM32F303_PCB_KanbanDPE_20250918_Day1_1335_DEBUG.log"
+Debug: 15 29 options.c:234 add_default_dirs(): bindir=../../bin
+Debug: 16 29 options.c:235 add_default_dirs(): pkgdatadir=../../share/openocd
+Debug: 17 29 options.c:236 add_default_dirs(): exepath=C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin
+Debug: 18 29 options.c:237 add_default_dirs(): bin2data=../share/openocd
+Debug: 19 29 configuration.c:33 add_script_search_dir(): adding C:/Users/Hp/AppData/Roaming/OpenOCD
+Debug: 20 29 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/site
+Debug: 21 29 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts
+Debug: 22 29 command.c:86 script_debug(): command - ocd_find .\openocd\openocd.cfg
+Debug: 23 29 configuration.c:89 find_file(): found .\openocd\openocd.cfg
+Debug: 24 35 command.c:86 script_debug(): command - ocd_find interface/stlink.cfg
+Debug: 25 35 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 26 36 command.c:86 script_debug(): command - adapter name
+Debug: 27 36 command.c:86 script_debug(): command - adapter driver st-link
+Debug: 28 36 command.c:86 script_debug(): command - st-link vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754 0x0483 0x3755 0x0483 0x3757
+Debug: 29 36 command.c:86 script_debug(): command - transport select swd
+Debug: 30 36 adi_v5_dapdirect.c:187 dapdirect_swd_select(): dapdirect_swd_select()
+Debug: 31 36 command.c:86 script_debug(): command - ocd_find target/stm32f3x.cfg
+Debug: 32 36 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/stm32f3x.cfg
+Debug: 33 36 command.c:86 script_debug(): command - ocd_find target/swj-dp.tcl
+Debug: 34 37 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/swj-dp.tcl
+Debug: 35 37 command.c:86 script_debug(): command - transport select
+Debug: 36 37 command.c:86 script_debug(): command - ocd_find mem_helper.tcl
+Debug: 37 37 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/mem_helper.tcl
+Debug: 38 37 command.c:86 script_debug(): command - add_usage_text mrw address
+Debug: 39 37 command.c:86 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 40 37 command.c:86 script_debug(): command - add_usage_text mrh address
+Debug: 41 37 command.c:86 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 42 37 command.c:86 script_debug(): command - add_usage_text mrb address
+Debug: 43 37 command.c:86 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 44 37 command.c:86 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 45 37 command.c:86 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 46 37 command.c:86 script_debug(): command - adapter srst delay 100
+Debug: 47 37 command.c:86 script_debug(): command - transport select
+Debug: 48 37 command.c:86 script_debug(): command - transport select
+Debug: 49 37 command.c:86 script_debug(): command - transport select
+Debug: 50 37 command.c:86 script_debug(): command - transport select
+Debug: 51 37 command.c:86 script_debug(): command - swd newdap stm32f3x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x2ba01477
+Debug: 52 37 tcl.c:404 handle_jtag_newtap_args(): Creating New Tap, Chip: stm32f3x, Tap: cpu, Dotted: stm32f3x.cpu, 8 params
+Debug: 53 37 core.c:1488 jtag_tap_init(): Created Tap: stm32f3x.cpu @ abs position 0, irlen 4, capture: 0x1 mask: 0xf
+Debug: 54 38 command.c:86 script_debug(): command - dap create stm32f3x.dap -chain-position stm32f3x.cpu
+Debug: 55 38 command.c:86 script_debug(): command - transport select
+Debug: 56 38 command.c:86 script_debug(): command - target create stm32f3x.cpu cortex_m -endian little -dap stm32f3x.dap
+Debug: 57 38 command.c:191 register_command(): command 'tpiu' is already registered
+Debug: 58 38 command.c:191 register_command(): command 'rtt' is already registered
+Debug: 59 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x4000 -work-area-backup 0
+Debug: 60 38 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 61 38 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 62 38 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 63 38 command.c:86 script_debug(): command - flash bank stm32f3x.flash stm32f1x 0 0 0 0 stm32f3x.cpu
+Debug: 64 38 tcl.c:1432 handle_flash_bank_command(): 'stm32f1x' driver usage field missing
+Debug: 65 38 command.c:86 script_debug(): command - reset_config srst_nogate
+Debug: 66 38 command.c:86 script_debug(): command - transport select
+Debug: 67 38 command.c:86 script_debug(): command - cortex_m reset_config sysresetreq
+Debug: 68 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-end  stm32f3x_default_examine_end 
+Debug: 69 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  stm32f3x_default_reset_start 
+Debug: 70 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-init  stm32f3x_default_reset_init 
+Debug: 71 38 command.c:86 script_debug(): command - tpiu create stm32f3x.tpiu -dap stm32f3x.dap -ap-num 0 -baseaddr 0xE0040000
+Debug: 72 38 command.c:86 script_debug(): command - stm32f3x.tpiu configure -event pre-enable _proc_pre_enable_stm32f3x.tpiu stm32f3x.cpu
+Debug: 73 38 command.c:86 script_debug(): command - adapter speed 950
+Debug: 74 38 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 75 38 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 76 38 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 77 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-start  adapter speed 950 
+Debug: 78 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  adapter speed 950 
+Debug: 79 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-end  adapter speed 950 
+Debug: 80 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-attach  adapter speed 4000 
+Debug: 81 38 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-detach  adapter speed 950 
+Info : 82 40 server.c:298 add_service(): Listening on port 6666 for tcl connections
+Info : 83 40 server.c:298 add_service(): Listening on port 4444 for telnet connections
+Debug: 84 40 command.c:86 script_debug(): command - init
+Debug: 85 40 command.c:86 script_debug(): command - target init
+Debug: 86 40 command.c:86 script_debug(): command - target names
+Debug: 87 40 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-erase-start
+Debug: 88 40 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 89 40 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-write-end
+Debug: 90 40 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 91 40 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-attach
+Debug: 92 40 target.c:1608 handle_target_init_command(): Initializing targets...
+Debug: 93 40 semihosting_common.c:109 semihosting_common_init():  
+Debug: 94 40 stlink_usb.c:5120 stlink_dap_init(): stlink_dap_init()
+Debug: 95 40 stlink_usb.c:3732 stlink_open(): stlink_open
+Debug: 96 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3744 serial: 
+Debug: 97 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3748 serial: 
+Debug: 98 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374b serial: 
+Debug: 99 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374d serial: 
+Debug: 100 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374e serial: 
+Debug: 101 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374f serial: 
+Debug: 102 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3752 serial: 
+Debug: 103 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3753 serial: 
+Debug: 104 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3754 serial: 
+Debug: 105 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3755 serial: 
+Debug: 106 40 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3757 serial: 
+Info : 107 79 stlink_usb.c:1471 stlink_usb_version(): STLINK V2J37M26 (API v2) VID:PID 0483:374B
+Debug: 108 79 stlink_usb.c:1696 stlink_usb_exit_mode(): MODE: 0x01
+Info : 109 79 stlink_usb.c:1507 stlink_usb_check_voltage(): Target voltage: 2.910940
+Debug: 110 79 stlink_usb.c:1764 stlink_usb_init_mode(): MODE: 0x01
+Debug: 111 79 stlink_usb.c:3130 stlink_dump_speed_map(): Supported clock speeds are:
+Debug: 112 79 stlink_usb.c:3133 stlink_dump_speed_map(): 4000 kHz
+Debug: 113 79 stlink_usb.c:3133 stlink_dump_speed_map(): 1800 kHz
+Debug: 114 79 stlink_usb.c:3133 stlink_dump_speed_map(): 1200 kHz
+Debug: 115 79 stlink_usb.c:3133 stlink_dump_speed_map(): 950 kHz
+Debug: 116 79 stlink_usb.c:3133 stlink_dump_speed_map(): 480 kHz
+Debug: 117 79 stlink_usb.c:3133 stlink_dump_speed_map(): 240 kHz
+Debug: 118 79 stlink_usb.c:3133 stlink_dump_speed_map(): 125 kHz
+Debug: 119 79 stlink_usb.c:3133 stlink_dump_speed_map(): 100 kHz
+Debug: 120 79 stlink_usb.c:3133 stlink_dump_speed_map(): 50 kHz
+Debug: 121 79 stlink_usb.c:3133 stlink_dump_speed_map(): 25 kHz
+Debug: 122 79 stlink_usb.c:3133 stlink_dump_speed_map(): 15 kHz
+Debug: 123 79 stlink_usb.c:3133 stlink_dump_speed_map(): 5 kHz
+Debug: 124 82 stlink_usb.c:1824 stlink_usb_init_mode(): MODE: 0x02
+Debug: 125 82 stlink_usb.c:4127 stlink_usb_open_ap(): AP 0 enabled
+Debug: 126 83 stlink_usb.c:3820 stlink_open(): Using TAR autoincrement: 4096
+Debug: 127 83 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 128 83 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 129 83 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 130 83 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Info : 131 83 adapter.c:180 adapter_init(): clock speed 950 kHz
+Debug: 132 83 openocd.c:133 handle_init_command(): Debug Adapter init complete
+Debug: 133 83 command.c:86 script_debug(): command - transport init
+Debug: 134 83 transport.c:274 handle_transport_init(): handle_transport_init
+Debug: 135 83 adi_v5_dapdirect.c:196 dapdirect_init(): dapdirect_init()
+Debug: 136 84 stlink_usb.c:5168 stlink_dap_reset(): stlink_dap_reset(0)
+Debug: 137 84 core.c:653 adapter_system_reset(): SRST line released
+Debug: 138 247 command.c:86 script_debug(): command - dap init
+Debug: 139 247 arm_dap.c:96 dap_init_all(): Initializing all DAPs ...
+Debug: 140 247 arm_dap.c:120 dap_init_all(): DAP stm32f3x.cpu configured by default to use ADIv5 protocol
+Info : 141 247 stlink_usb.c:4197 stlink_dap_op_connect(): stlink_dap_op_connect(connect)
+Debug: 142 247 arm_adi_v5.c:791 dap_dp_init(): stm32f3x.dap
+Debug: 143 247 arm_adi_v5.c:824 dap_dp_init(): DAP: wait CDBGPWRUPACK
+Debug: 144 248 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x20000000, value 0x20000000
+Debug: 145 250 arm_adi_v5.c:832 dap_dp_init(): DAP: wait CSYSPWRUPACK
+Debug: 146 250 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x80000000, value 0x80000000
+Debug: 147 253 stlink_usb.c:2057 stlink_usb_idcode(): IDCODE: 0x2BA01477
+Info : 148 253 stlink_usb.c:4224 stlink_dap_op_connect(): SWD DPIDR 0x2ba01477
+Debug: 149 253 openocd.c:150 handle_init_command(): Examining targets...
+Debug: 150 253 target.c:684 target_examine_one(): [stm32f3x.cpu] Examination started
+Debug: 151 253 target.c:1794 target_call_event_callbacks(): target event 19 (examine-start) for core stm32f3x.cpu
+Debug: 152 253 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 19 (examine-start) action:  adapter speed 950 
+Debug: 153 253 command.c:86 script_debug(): command - adapter speed 950
+Debug: 154 253 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 155 253 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 156 253 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 157 253 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 158 253 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 159 254 arm_adi_v5.c:1201 dap_get_ap(): refcount AP#0x0 get 1
+Debug: 160 254 arm_adi_v5.c:1144 dap_find_get_ap(): Found MEM-AP AHB3 at AP index: 0 (IDR=0x24770011)
+Debug: 161 255 arm_adi_v5.c:942 mem_ap_init(): MEM_AP CFG: large data 0, long address 0, big-endian 0
+Debug: 162 258 target.c:2581 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Info : 163 258 cortex_m.c:2917 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 r0p1 processor detected
+Debug: 164 258 cortex_m.c:2940 cortex_m_examine(): [stm32f3x.cpu] cpuid: 0x410fc241
+Debug: 165 259 target.c:2581 target_read_u32(): address: 0xe000ef40, value: 0x10110021
+Debug: 166 259 cortex_m.c:2947 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 floating point feature FPv4_SP found
+Debug: 167 260 target.c:2581 target_read_u32(): address: 0xe000edf0, value: 0x03090001
+Debug: 168 260 cortex_m.c:3013 cortex_m_examine(): [stm32f3x.cpu] reset happened some time ago, ignore
+Debug: 169 260 target.c:2669 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 170 261 target.c:2669 target_write_u32(): address: 0xe0000fb0, value: 0xc5acce55
+Debug: 171 264 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 172 264 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 173 266 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 174 266 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 175 267 target.c:2669 target_write_u32(): address: 0xe0000e00, value: 0x00000001
+Debug: 176 268 target.c:2669 target_write_u32(): address: 0xe0000e04, value: 0x00000000
+Debug: 177 268 target.c:2669 target_write_u32(): address: 0xe0000e08, value: 0x00000000
+Debug: 178 269 target.c:2669 target_write_u32(): address: 0xe0000e0c, value: 0x00000000
+Debug: 179 270 target.c:2669 target_write_u32(): address: 0xe0000e10, value: 0x00000000
+Debug: 180 271 target.c:2669 target_write_u32(): address: 0xe0000e14, value: 0x00000000
+Debug: 181 272 target.c:2669 target_write_u32(): address: 0xe0000e18, value: 0x00000000
+Debug: 182 272 target.c:2669 target_write_u32(): address: 0xe0000e1c, value: 0x00000000
+Debug: 183 274 target.c:2581 target_read_u32(): address: 0xe0002000, value: 0x00000261
+Debug: 184 274 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 185 274 target.c:2669 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 186 275 target.c:2669 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 187 276 target.c:2669 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 188 276 target.c:2669 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 189 277 target.c:2669 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 190 278 target.c:2669 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 191 278 target.c:2669 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 192 279 cortex_m.c:3060 cortex_m_examine(): [stm32f3x.cpu] FPB fpcr 0x261, numcode 6, numlit 2
+Debug: 193 280 target.c:2581 target_read_u32(): address: 0xe0001000, value: 0x40000000
+Debug: 194 280 cortex_m.c:2628 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_CTRL: 0x40000000
+Debug: 195 280 target.c:2581 target_read_u32(): address: 0xe0001fbc, value: 0x00000000
+Debug: 196 280 cortex_m.c:2635 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_DEVARCH: 0x0
+Debug: 197 280 target.c:2669 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 198 281 target.c:2669 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 199 282 target.c:2669 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 200 282 target.c:2669 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 201 283 cortex_m.c:2682 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT dwtcr 0x40000000, comp 4, watch/trigger
+Info : 202 283 cortex_m.c:3070 cortex_m_examine(): [stm32f3x.cpu] target has 6 breakpoints, 4 watchpoints
+Debug: 203 283 target.c:1794 target_call_event_callbacks(): target event 21 (examine-end) for core stm32f3x.cpu
+Debug: 204 283 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 205 283 command.c:86 script_debug(): command - read_memory 0xe0042004 32 1
+Debug: 206 284 command.c:86 script_debug(): command - mww 0xe0042004 7
+Debug: 207 284 command.c:86 script_debug(): command - read_memory 0xe0042008 32 1
+Debug: 208 285 command.c:86 script_debug(): command - mww 0xe0042008 6144
+Info : 209 286 target.c:700 target_examine_one(): [stm32f3x.cpu] Examination succeed
+Debug: 210 286 command.c:86 script_debug(): command - flash init
+Debug: 211 286 tcl.c:1489 handle_flash_init_command(): Initializing flash devices...
+Debug: 212 286 command.c:86 script_debug(): command - nand init
+Debug: 213 286 tcl.c:484 handle_nand_init_command(): Initializing NAND devices...
+Debug: 214 286 command.c:86 script_debug(): command - pld init
+Debug: 215 286 pld.c:337 handle_pld_init_command(): Initializing PLDs...
+Debug: 216 286 command.c:86 script_debug(): command - tpiu init
+Info : 217 286 gdb_server.c:3913 gdb_target_start(): [stm32f3x.cpu] starting gdb server on 3333
+Info : 218 286 server.c:298 add_service(): Listening on port 3333 for gdb connections
+Debug: 219 286 command.c:86 script_debug(): command - target names
+Debug: 220 286 command.c:86 script_debug(): command - target names
+Debug: 221 286 command.c:86 script_debug(): command - stm32f3x.cpu cget -type
+Error: 222 360 cortex_m.c:968 cortex_m_poll_one(): [stm32f3x.cpu] clearing lockup after double fault
+Debug: 223 363 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Error: 224 363 target.c:3018 handle_target(): [stm32f3x.cpu] Polling failed, trying to reexamine
+Debug: 225 363 target.c:684 target_examine_one(): [stm32f3x.cpu] Examination started
+Debug: 226 363 target.c:1794 target_call_event_callbacks(): target event 19 (examine-start) for core stm32f3x.cpu
+Debug: 227 363 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 19 (examine-start) action:  adapter speed 950 
+Debug: 228 363 command.c:86 script_debug(): command - adapter speed 950
+Debug: 229 363 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 230 363 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 231 363 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 232 363 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 233 363 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 234 364 arm_adi_v5.c:942 mem_ap_init(): MEM_AP CFG: large data 0, long address 0, big-endian 0
+Debug: 235 365 target.c:2581 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Info : 236 365 cortex_m.c:2917 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 r0p1 processor detected
+Debug: 237 365 cortex_m.c:2940 cortex_m_examine(): [stm32f3x.cpu] cpuid: 0x410fc241
+Debug: 238 366 target.c:2581 target_read_u32(): address: 0xe000ef40, value: 0x10110021
+Debug: 239 366 cortex_m.c:2947 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 floating point feature FPv4_SP found
+Debug: 240 367 target.c:2581 target_read_u32(): address: 0xe000edf0, value: 0x00030003
+Debug: 241 367 target.c:2669 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 242 368 target.c:2669 target_write_u32(): address: 0xe0000fb0, value: 0xc5acce55
+Debug: 243 369 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 244 369 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 245 370 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 246 370 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 247 371 target.c:2669 target_write_u32(): address: 0xe0000e00, value: 0x00000001
+Debug: 248 372 target.c:2669 target_write_u32(): address: 0xe0000e04, value: 0x00000000
+Debug: 249 373 target.c:2669 target_write_u32(): address: 0xe0000e08, value: 0x00000000
+Debug: 250 373 target.c:2669 target_write_u32(): address: 0xe0000e0c, value: 0x00000000
+Debug: 251 374 target.c:2669 target_write_u32(): address: 0xe0000e10, value: 0x00000000
+Debug: 252 375 target.c:2669 target_write_u32(): address: 0xe0000e14, value: 0x00000000
+Debug: 253 375 target.c:2669 target_write_u32(): address: 0xe0000e18, value: 0x00000000
+Debug: 254 376 target.c:2669 target_write_u32(): address: 0xe0000e1c, value: 0x00000000
+Debug: 255 377 target.c:2581 target_read_u32(): address: 0xe0002000, value: 0x00000261
+Debug: 256 377 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 257 378 target.c:2669 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 258 379 target.c:2669 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 259 380 target.c:2669 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 260 380 target.c:2669 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 261 381 target.c:2669 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 262 382 target.c:2669 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 263 383 target.c:2669 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 264 383 cortex_m.c:3060 cortex_m_examine(): [stm32f3x.cpu] FPB fpcr 0x261, numcode 6, numlit 2
+Debug: 265 384 target.c:2581 target_read_u32(): address: 0xe0001000, value: 0x40000000
+Debug: 266 384 cortex_m.c:2628 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_CTRL: 0x40000000
+Debug: 267 385 target.c:2581 target_read_u32(): address: 0xe0001fbc, value: 0x00000000
+Debug: 268 385 cortex_m.c:2635 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_DEVARCH: 0x0
+Debug: 269 385 target.c:2669 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 270 385 target.c:2669 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 271 386 target.c:2669 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 272 387 target.c:2669 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 273 387 cortex_m.c:2682 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT dwtcr 0x40000000, comp 4, watch/trigger
+Info : 274 387 cortex_m.c:3070 cortex_m_examine(): [stm32f3x.cpu] target has 6 breakpoints, 4 watchpoints
+Debug: 275 387 target.c:1794 target_call_event_callbacks(): target event 21 (examine-end) for core stm32f3x.cpu
+Debug: 276 387 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 277 387 command.c:86 script_debug(): command - read_memory 0xe0042004 32 1
+Debug: 278 388 command.c:86 script_debug(): command - mww 0xe0042004 7
+Debug: 279 389 command.c:86 script_debug(): command - read_memory 0xe0042008 32 1
+Debug: 280 390 command.c:86 script_debug(): command - mww 0xe0042008 6144
+Info : 281 390 target.c:700 target_examine_one(): [stm32f3x.cpu] Examination succeed
+Debug: 282 86214 server.c:608 sig_handler(): Terminating on Signal 2
+Debug: 283 86228 command.c:86 script_debug(): command - shutdown
+User : 284 86228 server.c:760 handle_shutdown_command(): shutdown command invoked
+Debug: 285 86228 breakpoints.c:328 breakpoint_remove_all_internal(): [stm32f3x.cpu] Delete all breakpoints
+Debug: 286 86228 arm_adi_v5.c:1226 dap_put_ap(): refcount AP#0x0 put 0
+Debug: 287 86228 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 288 86230 stlink_usb.c:5160 stlink_dap_quit(): stlink_dap_quit()
+Debug: 289 86230 stlink_usb.c:1696 stlink_usb_exit_mode(): MODE: 0x02

@@ -1,0 +1,24 @@
+set log_output to "STM32F303_PCB_KanbanDPE_20250918_Day1_1226.log"
+Info : STLINK V2J37M26 (API v2) VID:PID 0483:374B
+Info : Target voltage: 2.910940
+Info : clock speed 950 kHz
+Info : stlink_dap_op_connect(connect)
+Info : SWD DPIDR 0x2ba01477
+Starting examination...
+Info : Unable to match requested speed 400 kHz, using 240 kHz
+Info : Unable to match requested speed 400 kHz, using 240 kHz
+Error: [stm32f3x.cpu] Examination failed
+Warn : target stm32f3x.cpu examination failed
+Info : [stm32f3x.cpu] starting gdb server on 3333
+Info : Listening on port 3333 for gdb connections
+Reset started...
+Starting examination...
+Info : Unable to match requested speed 400 kHz, using 240 kHz
+Info : Unable to match requested speed 400 kHz, using 240 kHz
+Info : [stm32f3x.cpu] AP write error, reset will not halt
+Traceback (most recent call last):
+, in script
+    ocd_process_reset halt
+Traceback (most recent call last):
+, in script
+    ocd_process_reset halt
