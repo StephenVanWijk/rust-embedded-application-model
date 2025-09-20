@@ -1,0 +1,105 @@
+User : 7 50 options.c:53 configuration_output_handler(): set log_output to "STM32F303_PCB_KanbanDPE_20250918_Day3_1055.log"User : 8 50 options.c:53 configuration_output_handler(): 
+Debug: 9 50 options.c:357 parse_cmdline_args(): ARGV[0] = "C:\Program Files (x86)\OpenOCD-20250710-0.12.0\bin\openocd.exe"
+Debug: 10 50 options.c:357 parse_cmdline_args(): ARGV[1] = "-f"
+Debug: 11 51 options.c:357 parse_cmdline_args(): ARGV[2] = ".\openocd\openocd.cfg"
+Debug: 12 51 options.c:357 parse_cmdline_args(): ARGV[3] = "-d3"
+Debug: 13 51 options.c:357 parse_cmdline_args(): ARGV[4] = "-l"
+Debug: 14 79 options.c:357 parse_cmdline_args(): ARGV[5] = "STM32F303_PCB_KanbanDPE_20250918_Day3_1055.log"
+Debug: 15 79 options.c:234 add_default_dirs(): bindir=../../bin
+Debug: 16 79 options.c:235 add_default_dirs(): pkgdatadir=../../share/openocd
+Debug: 17 79 options.c:236 add_default_dirs(): exepath=C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin
+Debug: 18 79 options.c:237 add_default_dirs(): bin2data=../share/openocd
+Debug: 19 79 configuration.c:33 add_script_search_dir(): adding C:/Users/Hp/AppData/Roaming/OpenOCD
+Debug: 20 80 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/site
+Debug: 21 80 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts
+Debug: 22 80 command.c:86 script_debug(): command - ocd_find .\openocd\openocd.cfg
+Debug: 23 80 configuration.c:89 find_file(): found .\openocd\openocd.cfg
+Debug: 24 87 command.c:86 script_debug(): command - ocd_find interface/stlink.cfg
+Debug: 25 87 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 26 88 command.c:86 script_debug(): command - adapter name
+Debug: 27 88 command.c:86 script_debug(): command - adapter driver st-link
+Debug: 28 89 command.c:86 script_debug(): command - st-link vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754 0x0483 0x3755 0x0483 0x3757
+Debug: 29 89 command.c:86 script_debug(): command - transport select swd
+Debug: 30 89 adi_v5_dapdirect.c:187 dapdirect_swd_select(): dapdirect_swd_select()
+Debug: 31 89 command.c:86 script_debug(): command - ocd_find target/stm32f3x.cfg
+Debug: 32 90 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/stm32f3x.cfg
+Debug: 33 92 command.c:86 script_debug(): command - ocd_find target/swj-dp.tcl
+Debug: 34 92 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/swj-dp.tcl
+Debug: 35 93 command.c:86 script_debug(): command - transport select
+Debug: 36 93 command.c:86 script_debug(): command - ocd_find mem_helper.tcl
+Debug: 37 93 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/mem_helper.tcl
+Debug: 38 93 command.c:86 script_debug(): command - add_usage_text mrw address
+Debug: 39 93 command.c:86 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 40 93 command.c:86 script_debug(): command - add_usage_text mrh address
+Debug: 41 93 command.c:86 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 42 93 command.c:86 script_debug(): command - add_usage_text mrb address
+Debug: 43 93 command.c:86 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 44 93 command.c:86 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 45 93 command.c:86 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 46 94 command.c:86 script_debug(): command - adapter srst delay 100
+Debug: 47 94 command.c:86 script_debug(): command - transport select
+Debug: 48 94 command.c:86 script_debug(): command - transport select
+Debug: 49 94 command.c:86 script_debug(): command - transport select
+Debug: 50 94 command.c:86 script_debug(): command - transport select
+Debug: 51 94 command.c:86 script_debug(): command - swd newdap stm32f3x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x2ba01477
+Debug: 52 94 tcl.c:404 handle_jtag_newtap_args(): Creating New Tap, Chip: stm32f3x, Tap: cpu, Dotted: stm32f3x.cpu, 8 params
+Debug: 53 94 core.c:1488 jtag_tap_init(): Created Tap: stm32f3x.cpu @ abs position 0, irlen 4, capture: 0x1 mask: 0xf
+Debug: 54 94 command.c:86 script_debug(): command - dap create stm32f3x.dap -chain-position stm32f3x.cpu
+Debug: 55 94 command.c:86 script_debug(): command - transport select
+Debug: 56 94 command.c:86 script_debug(): command - target create stm32f3x.cpu cortex_m -endian little -dap stm32f3x.dap
+Debug: 57 94 command.c:191 register_command(): command 'tpiu' is already registered
+Debug: 58 94 command.c:191 register_command(): command 'rtt' is already registered
+Debug: 59 95 command.c:86 script_debug(): command - stm32f3x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x4000 -work-area-backup 0
+Debug: 60 95 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 61 95 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 62 95 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 63 95 command.c:86 script_debug(): command - flash bank stm32f3x.flash stm32f1x 0 0 0 0 stm32f3x.cpu
+Debug: 64 95 tcl.c:1432 handle_flash_bank_command(): 'stm32f1x' driver usage field missing
+Debug: 65 95 command.c:86 script_debug(): command - reset_config srst_nogate
+Debug: 66 95 command.c:86 script_debug(): command - transport select
+Debug: 67 95 command.c:86 script_debug(): command - cortex_m reset_config sysresetreq
+Debug: 68 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-end  stm32f3x_default_examine_end 
+Debug: 69 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  stm32f3x_default_reset_start 
+Debug: 70 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-init  stm32f3x_default_reset_init 
+Debug: 71 96 command.c:86 script_debug(): command - tpiu create stm32f3x.tpiu -dap stm32f3x.dap -ap-num 0 -baseaddr 0xE0040000
+Debug: 72 96 command.c:86 script_debug(): command - stm32f3x.tpiu configure -event pre-enable _proc_pre_enable_stm32f3x.tpiu stm32f3x.cpu
+Debug: 73 96 command.c:86 script_debug(): command - adapter speed 950
+Debug: 74 96 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 75 96 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 76 96 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 77 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-start  adapter speed 950 
+Debug: 78 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  adapter speed 950 
+Debug: 79 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-end  adapter speed 950 
+Debug: 80 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-attach  adapter speed 4000 
+Debug: 81 96 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-detach  adapter speed 950 
+Info : 82 100 server.c:298 add_service(): Listening on port 6666 for tcl connections
+Info : 83 101 server.c:298 add_service(): Listening on port 4444 for telnet connections
+Debug: 84 101 command.c:86 script_debug(): command - init
+Debug: 85 101 command.c:86 script_debug(): command - target init
+Debug: 86 101 command.c:86 script_debug(): command - target names
+Debug: 87 101 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-erase-start
+Debug: 88 101 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 89 101 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-write-end
+Debug: 90 101 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 91 101 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-attach
+Debug: 92 101 target.c:1608 handle_target_init_command(): Initializing targets...
+Debug: 93 101 semihosting_common.c:109 semihosting_common_init():  
+Debug: 94 102 stlink_usb.c:5120 stlink_dap_init(): stlink_dap_init()
+Debug: 95 102 stlink_usb.c:3732 stlink_open(): stlink_open
+Debug: 96 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3744 serial: 
+Debug: 97 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3748 serial: 
+Debug: 98 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374b serial: 
+Debug: 99 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374d serial: 
+Debug: 100 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374e serial: 
+Debug: 101 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374f serial: 
+Debug: 102 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3752 serial: 
+Debug: 103 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3753 serial: 
+Debug: 104 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3754 serial: 
+Debug: 105 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3755 serial: 
+Debug: 106 102 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3757 serial: 
+Error: 107 162 libusb_helper.c:179 jtag_libusb_open(): libusb_open() failed with LIBUSB_ERROR_ACCESS
+Error: 108 163 stlink_usb.c:3411 stlink_usb_usb_open(): open failed
+Debug: 109 163 command.c:457 exec_command(): Command 'init' failed with error code -4
+User : 110 163 command.c:530 command_run_line(): 
+Debug: 111 163 breakpoints.c:328 breakpoint_remove_all_internal(): [stm32f3x.cpu] Delete all breakpoints
+Debug: 112 164 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas

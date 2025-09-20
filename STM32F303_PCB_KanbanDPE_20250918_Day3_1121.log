@@ -1,0 +1,1256 @@
+User : 7 21 options.c:53 configuration_output_handler(): set log_output to "STM32F303_PCB_KanbanDPE_20250918_Day3_1121.log"User : 8 21 options.c:53 configuration_output_handler(): 
+Debug: 9 22 options.c:357 parse_cmdline_args(): ARGV[0] = "C:\Program Files (x86)\OpenOCD-20250710-0.12.0\bin\openocd.exe"
+Debug: 10 22 options.c:357 parse_cmdline_args(): ARGV[1] = "-f"
+Debug: 11 22 options.c:357 parse_cmdline_args(): ARGV[2] = ".\openocd\openocd.cfg"
+Debug: 12 22 options.c:357 parse_cmdline_args(): ARGV[3] = "-d3"
+Debug: 13 22 options.c:357 parse_cmdline_args(): ARGV[4] = "-l"
+Debug: 14 22 options.c:357 parse_cmdline_args(): ARGV[5] = "STM32F303_PCB_KanbanDPE_20250918_Day3_1121.log"
+Debug: 15 22 options.c:234 add_default_dirs(): bindir=../../bin
+Debug: 16 22 options.c:235 add_default_dirs(): pkgdatadir=../../share/openocd
+Debug: 17 22 options.c:236 add_default_dirs(): exepath=C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin
+Debug: 18 22 options.c:237 add_default_dirs(): bin2data=../share/openocd
+Debug: 19 22 configuration.c:33 add_script_search_dir(): adding C:/Users/Hp/AppData/Roaming/OpenOCD
+Debug: 20 22 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/site
+Debug: 21 22 configuration.c:33 add_script_search_dir(): adding C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts
+Debug: 22 22 command.c:86 script_debug(): command - ocd_find .\openocd\openocd.cfg
+Debug: 23 48 configuration.c:89 find_file(): found .\openocd\openocd.cfg
+Debug: 24 50 command.c:86 script_debug(): command - ocd_find interface/stlink.cfg
+Debug: 25 68 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/interface/stlink.cfg
+Debug: 26 68 command.c:86 script_debug(): command - adapter name
+Debug: 27 68 command.c:86 script_debug(): command - adapter driver st-link
+Debug: 28 68 command.c:86 script_debug(): command - st-link vid_pid 0x0483 0x3744 0x0483 0x3748 0x0483 0x374b 0x0483 0x374d 0x0483 0x374e 0x0483 0x374f 0x0483 0x3752 0x0483 0x3753 0x0483 0x3754 0x0483 0x3755 0x0483 0x3757
+Debug: 29 68 command.c:86 script_debug(): command - transport select swd
+Debug: 30 69 adi_v5_dapdirect.c:187 dapdirect_swd_select(): dapdirect_swd_select()
+Debug: 31 69 command.c:86 script_debug(): command - ocd_find target/stm32f3x.cfg
+Debug: 32 90 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/stm32f3x.cfg
+Debug: 33 91 command.c:86 script_debug(): command - ocd_find target/swj-dp.tcl
+Debug: 34 113 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/target/swj-dp.tcl
+Debug: 35 114 command.c:86 script_debug(): command - transport select
+Debug: 36 114 command.c:86 script_debug(): command - ocd_find mem_helper.tcl
+Debug: 37 134 configuration.c:89 find_file(): found C:/Program Files (x86)/OpenOCD-20250710-0.12.0/bin/../share/openocd/scripts/mem_helper.tcl
+Debug: 38 135 command.c:86 script_debug(): command - add_usage_text mrw address
+Debug: 39 135 command.c:86 script_debug(): command - add_help_text mrw Returns value of word in memory.
+Debug: 40 135 command.c:86 script_debug(): command - add_usage_text mrh address
+Debug: 41 135 command.c:86 script_debug(): command - add_help_text mrh Returns value of halfword in memory.
+Debug: 42 135 command.c:86 script_debug(): command - add_usage_text mrb address
+Debug: 43 135 command.c:86 script_debug(): command - add_help_text mrb Returns value of byte in memory.
+Debug: 44 135 command.c:86 script_debug(): command - add_usage_text mmw address setbits clearbits
+Debug: 45 135 command.c:86 script_debug(): command - add_help_text mmw Modify word in memory. new_val = (old_val & ~clearbits) | setbits;
+Debug: 46 135 command.c:86 script_debug(): command - adapter srst delay 100
+Debug: 47 135 command.c:86 script_debug(): command - transport select
+Debug: 48 135 command.c:86 script_debug(): command - transport select
+Debug: 49 136 command.c:86 script_debug(): command - transport select
+Debug: 50 136 command.c:86 script_debug(): command - transport select
+Debug: 51 136 command.c:86 script_debug(): command - swd newdap stm32f3x cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id 0x2ba01477
+Debug: 52 136 tcl.c:404 handle_jtag_newtap_args(): Creating New Tap, Chip: stm32f3x, Tap: cpu, Dotted: stm32f3x.cpu, 8 params
+Debug: 53 136 core.c:1488 jtag_tap_init(): Created Tap: stm32f3x.cpu @ abs position 0, irlen 4, capture: 0x1 mask: 0xf
+Debug: 54 136 command.c:86 script_debug(): command - dap create stm32f3x.dap -chain-position stm32f3x.cpu
+Debug: 55 136 command.c:86 script_debug(): command - transport select
+Debug: 56 136 command.c:86 script_debug(): command - target create stm32f3x.cpu cortex_m -endian little -dap stm32f3x.dap
+Debug: 57 137 command.c:191 register_command(): command 'tpiu' is already registered
+Debug: 58 137 command.c:191 register_command(): command 'rtt' is already registered
+Debug: 59 137 command.c:86 script_debug(): command - stm32f3x.cpu configure -work-area-phys 0x20000000 -work-area-size 0x4000 -work-area-backup 0
+Debug: 60 137 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 61 137 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 62 137 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 63 137 command.c:86 script_debug(): command - flash bank stm32f3x.flash stm32f1x 0 0 0 0 stm32f3x.cpu
+Debug: 64 138 tcl.c:1432 handle_flash_bank_command(): 'stm32f1x' driver usage field missing
+Debug: 65 138 command.c:86 script_debug(): command - reset_config srst_nogate
+Debug: 66 138 command.c:86 script_debug(): command - transport select
+Debug: 67 138 command.c:86 script_debug(): command - cortex_m reset_config sysresetreq
+Debug: 68 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-end  stm32f3x_default_examine_end 
+Debug: 69 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  stm32f3x_default_reset_start 
+Debug: 70 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-init  stm32f3x_default_reset_init 
+Debug: 71 138 command.c:86 script_debug(): command - tpiu create stm32f3x.tpiu -dap stm32f3x.dap -ap-num 0 -baseaddr 0xE0040000
+Debug: 72 138 command.c:86 script_debug(): command - stm32f3x.tpiu configure -event pre-enable _proc_pre_enable_stm32f3x.tpiu stm32f3x.cpu
+Debug: 73 138 command.c:86 script_debug(): command - adapter speed 950
+Debug: 74 138 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 75 138 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 76 138 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 77 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event examine-start  adapter speed 950 
+Debug: 78 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-start  adapter speed 950 
+Debug: 79 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event reset-end  adapter speed 950 
+Debug: 80 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-attach  adapter speed 4000 
+Debug: 81 138 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-detach  adapter speed 950 
+Info : 82 142 server.c:298 add_service(): Listening on port 6666 for tcl connections
+Info : 83 142 server.c:298 add_service(): Listening on port 4444 for telnet connections
+Debug: 84 142 command.c:86 script_debug(): command - init
+Debug: 85 142 command.c:86 script_debug(): command - target init
+Debug: 86 142 command.c:86 script_debug(): command - target names
+Debug: 87 142 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-erase-start
+Debug: 88 142 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-erase-start reset init
+Debug: 89 142 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-flash-write-end
+Debug: 90 143 command.c:86 script_debug(): command - stm32f3x.cpu configure -event gdb-flash-write-end reset halt
+Debug: 91 143 command.c:86 script_debug(): command - stm32f3x.cpu cget -event gdb-attach
+Debug: 92 143 target.c:1608 handle_target_init_command(): Initializing targets...
+Debug: 93 143 semihosting_common.c:109 semihosting_common_init():  
+Debug: 94 143 stlink_usb.c:5120 stlink_dap_init(): stlink_dap_init()
+Debug: 95 143 stlink_usb.c:3732 stlink_open(): stlink_open
+Debug: 96 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3744 serial: 
+Debug: 97 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3748 serial: 
+Debug: 98 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374b serial: 
+Debug: 99 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374d serial: 
+Debug: 100 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374e serial: 
+Debug: 101 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x374f serial: 
+Debug: 102 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3752 serial: 
+Debug: 103 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3753 serial: 
+Debug: 104 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3754 serial: 
+Debug: 105 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3755 serial: 
+Debug: 106 144 stlink_usb.c:3744 stlink_open(): transport: 4 vid: 0x0483 pid: 0x3757 serial: 
+Info : 107 179 stlink_usb.c:1471 stlink_usb_version(): STLINK V2J37M26 (API v2) VID:PID 0483:374B
+Debug: 108 179 stlink_usb.c:1696 stlink_usb_exit_mode(): MODE: 0x01
+Info : 109 180 stlink_usb.c:1507 stlink_usb_check_voltage(): Target voltage: 2.915808
+Debug: 110 180 stlink_usb.c:1764 stlink_usb_init_mode(): MODE: 0x01
+Debug: 111 180 stlink_usb.c:3130 stlink_dump_speed_map(): Supported clock speeds are:
+Debug: 112 180 stlink_usb.c:3133 stlink_dump_speed_map(): 4000 kHz
+Debug: 113 180 stlink_usb.c:3133 stlink_dump_speed_map(): 1800 kHz
+Debug: 114 180 stlink_usb.c:3133 stlink_dump_speed_map(): 1200 kHz
+Debug: 115 180 stlink_usb.c:3133 stlink_dump_speed_map(): 950 kHz
+Debug: 116 180 stlink_usb.c:3133 stlink_dump_speed_map(): 480 kHz
+Debug: 117 180 stlink_usb.c:3133 stlink_dump_speed_map(): 240 kHz
+Debug: 118 180 stlink_usb.c:3133 stlink_dump_speed_map(): 125 kHz
+Debug: 119 180 stlink_usb.c:3133 stlink_dump_speed_map(): 100 kHz
+Debug: 120 180 stlink_usb.c:3133 stlink_dump_speed_map(): 50 kHz
+Debug: 121 180 stlink_usb.c:3133 stlink_dump_speed_map(): 25 kHz
+Debug: 122 180 stlink_usb.c:3133 stlink_dump_speed_map(): 15 kHz
+Debug: 123 180 stlink_usb.c:3133 stlink_dump_speed_map(): 5 kHz
+Debug: 124 182 stlink_usb.c:1824 stlink_usb_init_mode(): MODE: 0x02
+Debug: 125 182 stlink_usb.c:4127 stlink_usb_open_ap(): AP 0 enabled
+Debug: 126 183 stlink_usb.c:3820 stlink_open(): Using TAR autoincrement: 4096
+Debug: 127 183 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 128 183 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 129 183 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 130 183 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Info : 131 183 adapter.c:180 adapter_init(): clock speed 950 kHz
+Debug: 132 183 openocd.c:133 handle_init_command(): Debug Adapter init complete
+Debug: 133 183 command.c:86 script_debug(): command - transport init
+Debug: 134 183 transport.c:274 handle_transport_init(): handle_transport_init
+Debug: 135 183 adi_v5_dapdirect.c:196 dapdirect_init(): dapdirect_init()
+Debug: 136 183 stlink_usb.c:5168 stlink_dap_reset(): stlink_dap_reset(0)
+Debug: 137 183 core.c:653 adapter_system_reset(): SRST line released
+Debug: 138 350 command.c:86 script_debug(): command - dap init
+Debug: 139 350 arm_dap.c:96 dap_init_all(): Initializing all DAPs ...
+Debug: 140 350 arm_dap.c:120 dap_init_all(): DAP stm32f3x.cpu configured by default to use ADIv5 protocol
+Info : 141 350 stlink_usb.c:4197 stlink_dap_op_connect(): stlink_dap_op_connect(connect)
+Debug: 142 350 arm_adi_v5.c:791 dap_dp_init(): stm32f3x.dap
+Debug: 143 350 arm_adi_v5.c:824 dap_dp_init(): DAP: wait CDBGPWRUPACK
+Debug: 144 350 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x20000000, value 0x20000000
+Debug: 145 352 arm_adi_v5.c:832 dap_dp_init(): DAP: wait CSYSPWRUPACK
+Debug: 146 352 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x80000000, value 0x80000000
+Debug: 147 354 stlink_usb.c:2057 stlink_usb_idcode(): IDCODE: 0x2BA01477
+Info : 148 354 stlink_usb.c:4224 stlink_dap_op_connect(): SWD DPIDR 0x2ba01477
+Debug: 149 354 openocd.c:150 handle_init_command(): Examining targets...
+Debug: 150 354 target.c:684 target_examine_one(): [stm32f3x.cpu] Examination started
+Debug: 151 354 target.c:1794 target_call_event_callbacks(): target event 19 (examine-start) for core stm32f3x.cpu
+Debug: 152 354 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 19 (examine-start) action:  adapter speed 950 
+Debug: 153 354 command.c:86 script_debug(): command - adapter speed 950
+Debug: 154 354 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 155 354 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 156 354 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 157 355 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 158 355 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 159 355 arm_adi_v5.c:1201 dap_get_ap(): refcount AP#0x0 get 1
+Debug: 160 355 arm_adi_v5.c:1144 dap_find_get_ap(): Found MEM-AP AHB3 at AP index: 0 (IDR=0x24770011)
+Debug: 161 356 arm_adi_v5.c:942 mem_ap_init(): MEM_AP CFG: large data 0, long address 0, big-endian 0
+Debug: 162 357 target.c:2581 target_read_u32(): address: 0xe000ed00, value: 0x410fc241
+Info : 163 357 cortex_m.c:2917 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 r0p1 processor detected
+Debug: 164 357 cortex_m.c:2940 cortex_m_examine(): [stm32f3x.cpu] cpuid: 0x410fc241
+Debug: 165 358 target.c:2581 target_read_u32(): address: 0xe000ef40, value: 0x10110021
+Debug: 166 358 cortex_m.c:2947 cortex_m_examine(): [stm32f3x.cpu] Cortex-M4 floating point feature FPv4_SP found
+Debug: 167 359 target.c:2581 target_read_u32(): address: 0xe000edf0, value: 0x01010001
+Debug: 168 359 target.c:2669 target_write_u32(): address: 0xe000edfc, value: 0x01000000
+Debug: 169 359 target.c:2669 target_write_u32(): address: 0xe0000fb0, value: 0xc5acce55
+Debug: 170 361 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 171 361 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 172 362 target.c:2581 target_read_u32(): address: 0xe0000e80, value: 0x00010008
+Debug: 173 362 target.c:2669 target_write_u32(): address: 0xe0000e80, value: 0x00010009
+Debug: 174 363 target.c:2669 target_write_u32(): address: 0xe0000e00, value: 0x00000001
+Debug: 175 364 target.c:2669 target_write_u32(): address: 0xe0000e04, value: 0x00000000
+Debug: 176 364 target.c:2669 target_write_u32(): address: 0xe0000e08, value: 0x00000000
+Debug: 177 365 target.c:2669 target_write_u32(): address: 0xe0000e0c, value: 0x00000000
+Debug: 178 366 target.c:2669 target_write_u32(): address: 0xe0000e10, value: 0x00000000
+Debug: 179 367 target.c:2669 target_write_u32(): address: 0xe0000e14, value: 0x00000000
+Debug: 180 367 target.c:2669 target_write_u32(): address: 0xe0000e18, value: 0x00000000
+Debug: 181 368 target.c:2669 target_write_u32(): address: 0xe0000e1c, value: 0x00000000
+Debug: 182 370 target.c:2581 target_read_u32(): address: 0xe0002000, value: 0x00000261
+Debug: 183 370 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 184 370 target.c:2669 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 185 371 target.c:2669 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 186 372 target.c:2669 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 187 372 target.c:2669 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 188 373 target.c:2669 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 189 374 target.c:2669 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 190 374 target.c:2669 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 191 375 cortex_m.c:3060 cortex_m_examine(): [stm32f3x.cpu] FPB fpcr 0x261, numcode 6, numlit 2
+Debug: 192 376 target.c:2581 target_read_u32(): address: 0xe0001000, value: 0x40000000
+Debug: 193 376 cortex_m.c:2628 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_CTRL: 0x40000000
+Debug: 194 377 target.c:2581 target_read_u32(): address: 0xe0001fbc, value: 0x00000000
+Debug: 195 377 cortex_m.c:2635 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT_DEVARCH: 0x0
+Debug: 196 377 target.c:2669 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 197 377 target.c:2669 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 198 378 target.c:2669 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 199 379 target.c:2669 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 200 380 cortex_m.c:2682 cortex_m_dwt_setup(): [stm32f3x.cpu] DWT dwtcr 0x40000000, comp 4, watch/trigger
+Info : 201 380 cortex_m.c:3070 cortex_m_examine(): [stm32f3x.cpu] target has 6 breakpoints, 4 watchpoints
+Debug: 202 380 target.c:1794 target_call_event_callbacks(): target event 21 (examine-end) for core stm32f3x.cpu
+Debug: 203 380 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 204 380 command.c:86 script_debug(): command - read_memory 0xe0042004 32 1
+Debug: 205 380 command.c:86 script_debug(): command - mww 0xe0042004 7
+Debug: 206 381 command.c:86 script_debug(): command - read_memory 0xe0042008 32 1
+Debug: 207 382 command.c:86 script_debug(): command - mww 0xe0042008 6144
+Info : 208 383 target.c:700 target_examine_one(): [stm32f3x.cpu] Examination succeed
+Debug: 209 383 command.c:86 script_debug(): command - flash init
+Debug: 210 383 tcl.c:1489 handle_flash_init_command(): Initializing flash devices...
+Debug: 211 383 command.c:86 script_debug(): command - nand init
+Debug: 212 383 tcl.c:484 handle_nand_init_command(): Initializing NAND devices...
+Debug: 213 383 command.c:86 script_debug(): command - pld init
+Debug: 214 383 pld.c:337 handle_pld_init_command(): Initializing PLDs...
+Debug: 215 383 command.c:86 script_debug(): command - tpiu init
+Info : 216 383 gdb_server.c:3913 gdb_target_start(): [stm32f3x.cpu] starting gdb server on 3333
+Info : 217 383 server.c:298 add_service(): Listening on port 3333 for gdb connections
+Debug: 218 383 command.c:86 script_debug(): command - target names
+Debug: 219 383 command.c:86 script_debug(): command - target names
+Debug: 220 383 command.c:86 script_debug(): command - stm32f3x.cpu cget -type
+Info : 221 105841 server.c:91 add_connection(): accepting 'gdb' connection on tcp/3333
+Debug: 222 105841 breakpoints.c:328 breakpoint_remove_all_internal(): [stm32f3x.cpu] Delete all breakpoints
+Debug: 223 105841 breakpoints.c:646 watchpoint_clear_target(): [stm32f3x.cpu] Delete all watchpoints
+Debug: 224 105855 target.c:1794 target_call_event_callbacks(): target event 22 (gdb-attach) for core stm32f3x.cpu
+Debug: 225 105855 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 22 (gdb-attach) action:  adapter speed 4000 
+Debug: 226 105855 command.c:86 script_debug(): command - adapter speed 4000
+Debug: 227 105855 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 228 105855 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 229 105855 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 230 105855 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 231 105855 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 232 105857 target.c:2581 target_read_u32(): address: 0xe0042000, value: 0x10036422
+Info : 233 105857 stm32f1x.c:828 stm32x_probe(): device id = 0x10036422
+Debug: 234 105858 arm_adi_v5.c:408 mem_ap_setup_transfer_verify_size_packing(): AP#0x0 probed size 2: supported
+Debug: 235 105859 target.c:2605 target_read_u16(): address: 0x1ffff7cc, value: 0x0100
+Info : 236 105859 stm32f1x.c:1010 stm32x_probe(): flash size = 256 KiB
+Debug: 237 105859 gdb_server.c:1092 gdb_new_connection(): New GDB Connection: 1, Target stm32f3x.cpu, state: running
+Warn : 238 105859 gdb_server.c:1106 gdb_new_connection(): [stm32f3x.cpu] GDB connection 1 not halted
+Debug: 239 105859 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSupported:multiprocess+;swbreak+;hwbreak+;qRelocInsn+;fork-events+;vfork-events+;exec-events+;vContSupported+;QThreadEvents+;QThreadOptions+;no-resumed+;memory-tagging+
+Debug: 240 105860 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $PacketSize=4000;qXfer:memory-map:read+;qXfer:features:read+;qXfer:threads:read+;QStartNoAckMode+;vContSupported+#02
+Debug: 241 105860 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: +
+Debug: 242 105860 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont?
+Debug: 243 105860 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $vCont;c;C;s;S#62
+Debug: 244 105861 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: +
+Debug: 245 105861 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vMustReplyEmpty
+Debug: 246 105861 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $#00
+Debug: 247 105861 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: +
+Debug: 248 105861 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: QStartNoAckMode
+Debug: 249 105861 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 250 105862 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: +
+Debug: 251 105862 gdb_server.c:716 gdb_get_packet_inner(): Received first acknowledgment after entering noack mode. Ignoring it.
+Debug: 252 105862 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: !
+Debug: 253 105862 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 254 105864 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Hg0
+Debug: 255 105864 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 256 105864 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:features:read:target.xml:0,1000
+Debug: 257 105865 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-3942-bytes>#31
+Debug: 258 105878 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qTStatus
+Debug: 259 105878 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $#00
+Debug: 260 105878 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: ?
+Debug: 261 105878 gdb_server.c:179 gdb_last_signal(): [stm32f3x.cpu] Debug reason is: UNDEFINED
+User : 262 105878 gdb_server.c:196 gdb_last_signal(): undefined debug reason 8 (UNDEFINED) - target needs reset
+Debug: 263 105878 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $S00#b3
+Debug: 264 105879 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 265 105879 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 266 105879 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Hc-1
+Debug: 267 105880 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 268 105880 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qC
+Debug: 269 105880 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $QC0#c4
+Debug: 270 105880 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qAttached
+Debug: 271 105880 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $1#31
+Debug: 272 105881 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qOffsets
+Debug: 273 105881 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $Text=0;Data=0;Bss=0#04
+Debug: 274 105883 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 275 105883 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000#80
+Debug: 276 105884 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 277 105884 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 278 105886 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:memory-map:read::0,1000
+Debug: 279 105886 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-260-bytes>#de
+Debug: 280 105886 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m0,4
+Debug: 281 105886 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000000000000, len: 0x00000004
+Debug: 282 105887 target.c:2428 target_read_buffer(): reading buffer of 4 byte at 0x00000000
+Debug: 283 105887 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $00a00020#b3
+Debug: 284 105893 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSymbol::
+Debug: 285 105893 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 286 105931 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSymbol::
+Debug: 287 105931 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 288 105931 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSymbol::
+Debug: 289 105931 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 290 105932 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 291 105932 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000#80
+Debug: 292 105953 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSymbol::
+Debug: 293 105953 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 294 105953 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qSymbol::
+Debug: 295 105953 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 296 105953 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashErase:08000000,00009000
+Debug: 297 105954 target.c:1794 target_call_event_callbacks(): target event 24 (gdb-flash-erase-start) for core stm32f3x.cpu
+Debug: 298 105954 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 24 (gdb-flash-erase-start) action: reset init
+Debug: 299 105954 command.c:86 script_debug(): command - reset init
+Debug: 300 105954 target.c:1813 target_call_reset_callbacks(): target reset 3 (init)
+Debug: 301 105954 command.c:86 script_debug(): command - target names
+Debug: 302 105954 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-start
+Debug: 303 105954 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 9 (reset-start) action:  adapter speed 950 
+Debug: 304 105954 command.c:86 script_debug(): command - adapter speed 950
+Debug: 305 105954 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 306 105954 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 307 105954 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 308 105954 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 309 105954 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 310 105954 command.c:86 script_debug(): command - transport select
+Debug: 311 105954 command.c:86 script_debug(): command - transport select
+Debug: 312 105954 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event examine-start
+Debug: 313 105954 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 19 (examine-start) action:  adapter speed 950 
+Debug: 314 105954 command.c:86 script_debug(): command - adapter speed 950
+Debug: 315 105954 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 316 105954 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 317 105954 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 318 105954 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 319 105954 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 320 105954 command.c:86 script_debug(): command - stm32f3x.cpu arp_examine allow-defer
+Debug: 321 105955 arm_adi_v5.c:942 mem_ap_init(): MEM_AP CFG: large data 0, long address 0, big-endian 0
+Debug: 322 105955 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event examine-end
+Debug: 323 105955 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 324 105955 command.c:86 script_debug(): command - read_memory 0xe0042004 32 1
+Debug: 325 105956 command.c:86 script_debug(): command - mww 0xe0042004 7
+Debug: 326 105956 command.c:86 script_debug(): command - read_memory 0xe0042008 32 1
+Debug: 327 105957 command.c:86 script_debug(): command - mww 0xe0042008 6144
+Debug: 328 105958 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-pre
+Debug: 329 105958 command.c:86 script_debug(): command - transport select
+Debug: 330 105958 command.c:86 script_debug(): command - stm32f3x.cpu arp_reset assert 1
+Debug: 331 105958 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 332 105958 cortex_m.c:1851 cortex_m_assert_reset(): [stm32f3x.cpu] target->state: running, examined
+Debug: 333 105959 cortex_m.c:1971 cortex_m_assert_reset(): [stm32f3x.cpu] Using Cortex-M SYSRESETREQ
+Debug: 334 105960 arm_adi_v5.c:867 dap_dp_init_or_reconnect(): stm32f3x.dap
+Debug: 335 105961 arm_adi_v5.c:791 dap_dp_init(): stm32f3x.dap
+Debug: 336 105961 arm_adi_v5.c:824 dap_dp_init(): DAP: wait CDBGPWRUPACK
+Debug: 337 105961 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x20000000, value 0x20000000
+Debug: 338 105963 arm_adi_v5.c:832 dap_dp_init(): DAP: wait CSYSPWRUPACK
+Debug: 339 105963 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x80000000, value 0x80000000
+Debug: 340 106057 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-post
+Debug: 341 106058 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-pre
+Debug: 342 106058 command.c:86 script_debug(): command - transport select
+Debug: 343 106058 command.c:86 script_debug(): command - stm32f3x.cpu arp_reset deassert 1
+Debug: 344 106058 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 345 106058 cortex_m.c:2014 cortex_m_deassert_reset(): [stm32f3x.cpu] target->state: reset, examined
+Debug: 346 106058 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-post
+Debug: 347 106058 command.c:86 script_debug(): command - transport select
+Debug: 348 106058 command.c:86 script_debug(): command - stm32f3x.cpu was_examined
+Debug: 349 106058 command.c:86 script_debug(): command - stm32f3x.cpu arp_waitstate halted 1000
+Debug: 350 106061 cortex_m.c:1012 cortex_m_poll_one(): [stm32f3x.cpu] Exit from reset with dcb_dhcsr 0x30003
+Debug: 351 106062 cortex_m.c:619 cortex_m_endreset_event(): [stm32f3x.cpu] DCB_DEMCR = 0x01000501
+Debug: 352 106062 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 2 commands in 4 items
+Debug: 353 106063 target.c:2669 target_write_u32(): address: 0xe0002000, value: 0x00000003
+Debug: 354 106063 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 2 commands in 5 items
+Debug: 355 106066 target.c:2581 target_read_u32(): address: 0xe0002000, value: 0x00000261
+Debug: 356 106066 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 357 106067 target.c:2669 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 358 106067 target.c:2669 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 359 106068 target.c:2669 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 360 106069 target.c:2669 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 361 106070 target.c:2669 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 362 106071 target.c:2669 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 363 106072 target.c:2669 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 364 106072 target.c:2669 target_write_u32(): address: 0xe0001020, value: 0x00000000
+Debug: 365 106074 target.c:2669 target_write_u32(): address: 0xe0001024, value: 0x00000000
+Debug: 366 106075 target.c:2669 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 367 106076 target.c:2669 target_write_u32(): address: 0xe0001030, value: 0x00000000
+Debug: 368 106077 target.c:2669 target_write_u32(): address: 0xe0001034, value: 0x00000000
+Debug: 369 106078 target.c:2669 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 370 106078 target.c:2669 target_write_u32(): address: 0xe0001040, value: 0x00000000
+Debug: 371 106079 target.c:2669 target_write_u32(): address: 0xe0001044, value: 0x00000000
+Debug: 372 106080 target.c:2669 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 373 106081 target.c:2669 target_write_u32(): address: 0xe0001050, value: 0x00000000
+Debug: 374 106082 target.c:2669 target_write_u32(): address: 0xe0001054, value: 0x00000000
+Debug: 375 106083 target.c:2669 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 376 106085 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 377 106087 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x9
+Debug: 378 106088 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 379 106100 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 380 106113 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 381 106126 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 382 106131 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 383 106131 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Thread at PC 0x8000194, cpu in Non-Secure state, target->state: halted
+Debug: 384 106131 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 385 106131 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+User : 386 106131 armv7m.c:771 armv7m_arch_state(): [stm32f3x.cpu] halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000194 msp: 0x2000a000
+Debug: 387 106131 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 388 106131 command.c:86 script_debug(): command - stm32f3x.cpu curstate
+Debug: 389 106131 command.c:86 script_debug(): command - transport select
+Debug: 390 106131 command.c:86 script_debug(): command - stm32f3x.cpu was_examined
+Debug: 391 106131 command.c:86 script_debug(): command - stm32f3x.cpu arp_waitstate halted 5000
+Debug: 392 106133 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-init
+Debug: 393 106133 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 15 (reset-init) action:  stm32f3x_default_reset_init 
+Debug: 394 106133 command.c:86 script_debug(): command - mww 0x40021004 0x00380400
+Debug: 395 106134 command.c:86 script_debug(): command - read_memory 0x40021000 32 1
+Debug: 396 106135 command.c:86 script_debug(): command - mww 0x40021000 16800387
+Debug: 397 106136 command.c:86 script_debug(): command - mww 0x40022000 0x00000012
+Debug: 398 106137 command.c:86 script_debug(): command - sleep 10
+Debug: 399 106153 command.c:86 script_debug(): command - read_memory 0x40021004 32 1
+Debug: 400 106155 command.c:86 script_debug(): command - mww 0x40021004 3671042
+Debug: 401 106156 command.c:86 script_debug(): command - adapter speed 8000
+Debug: 402 106156 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 403 106157 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 404 106157 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Info : 405 106157 stlink_usb.c:3073 stlink_match_speed_map(): Unable to match requested speed 8000 kHz, using 4000 kHz
+Debug: 406 106157 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 407 106157 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Info : 408 106157 stlink_usb.c:3073 stlink_match_speed_map(): Unable to match requested speed 8000 kHz, using 4000 kHz
+Debug: 409 106157 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-end
+Debug: 410 106157 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 16 (reset-end) action:  adapter speed 950 
+Debug: 411 106157 command.c:86 script_debug(): command - adapter speed 950
+Debug: 412 106157 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 413 106157 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 414 106157 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 415 106157 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 416 106157 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 417 106158 target.c:2669 target_write_u32(): address: 0x40022004, value: 0x45670123
+Debug: 418 106159 target.c:2669 target_write_u32(): address: 0x40022004, value: 0xcdef89ab
+Debug: 419 106160 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 420 106161 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08000000
+Debug: 421 106162 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 422 106163 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 423 106163 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x3
+Debug: 424 106170 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000003
+Debug: 425 106170 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x3
+Debug: 426 106187 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 427 106187 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 428 106187 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 429 106188 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08000800
+Debug: 430 106189 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 431 106190 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 432 106191 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 433 106203 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 434 106203 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 435 106219 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 436 106219 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 437 106219 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 438 106220 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08001000
+Debug: 439 106221 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 440 106223 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 441 106224 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 442 106238 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 443 106238 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 444 106242 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 445 106242 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 446 106259 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 447 106259 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 448 106259 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 449 106260 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08001800
+Debug: 450 106261 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 451 106264 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 452 106264 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 453 106276 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 454 106276 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 455 106292 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 456 106292 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 457 106292 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 458 106294 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08002000
+Debug: 459 106296 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 460 106299 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 461 106299 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 462 106309 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 463 106309 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 464 106325 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 465 106325 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 466 106325 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 467 106327 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08002800
+Debug: 468 106329 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 469 106332 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 470 106332 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 471 106341 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 472 106342 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 473 106357 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 474 106357 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 475 106357 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 476 106359 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08003000
+Debug: 477 106361 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 478 106363 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 479 106364 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 480 106374 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 481 106374 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 482 106390 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 483 106390 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 484 106390 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 485 106392 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08003800
+Debug: 486 106394 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 487 106397 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 488 106397 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 489 106406 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 490 106406 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 491 106422 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 492 106422 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 493 106422 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 494 106424 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08004000
+Debug: 495 106425 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 496 106429 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 497 106429 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 498 106438 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 499 106438 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 500 106454 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 501 106454 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 502 106454 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 503 106455 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08004800
+Debug: 504 106457 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 505 106459 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 506 106459 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 507 106470 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 508 106470 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 509 106486 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 510 106486 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 511 106486 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 512 106488 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08005000
+Debug: 513 106489 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 514 106493 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 515 106493 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 516 106502 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 517 106502 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 518 106518 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 519 106518 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 520 106518 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 521 106520 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08005800
+Debug: 522 106521 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 523 106525 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 524 106525 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 525 106534 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 526 106534 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 527 106550 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 528 106551 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 529 106551 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 530 106552 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08006000
+Debug: 531 106554 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 532 106558 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 533 106558 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 534 106567 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 535 106567 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 536 106583 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 537 106583 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 538 106583 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 539 106585 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08006800
+Debug: 540 106586 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 541 106590 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 542 106590 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 543 106599 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 544 106599 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 545 106615 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 546 106616 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 547 106616 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 548 106617 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08007000
+Debug: 549 106619 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 550 106623 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 551 106623 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 552 106635 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 553 106635 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 554 106650 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 555 106650 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 556 106651 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 557 106652 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08007800
+Debug: 558 106653 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 559 106656 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 560 106656 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 561 106666 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 562 106666 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 563 106683 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 564 106683 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 565 106683 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 566 106684 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08008000
+Debug: 567 106686 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 568 106689 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 569 106689 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 570 106699 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 571 106699 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 572 106715 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 573 106715 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 574 106715 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000002
+Debug: 575 106717 target.c:2669 target_write_u32(): address: 0x40022014, value: 0x08008800
+Debug: 576 106719 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000042
+Debug: 577 106723 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 578 106723 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 579 106731 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000023
+Debug: 580 106731 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x23
+Debug: 581 106747 target.c:2581 target_read_u32(): address: 0x4002200c, value: 0x00000020
+Debug: 582 106747 stm32f1x.c:173 stm32x_wait_status_busy(): status: 0x20
+Debug: 583 106747 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000080
+Debug: 584 106749 target.c:1794 target_call_event_callbacks(): target event 25 (gdb-flash-erase-end) for core stm32f3x.cpu
+Debug: 585 106749 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 586 106759 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashWrite:8000000:
+Debug: 587 106759 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 588 106763 gdb_server.c:400 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashWrite:<binary-data-18-bytes>
+Debug: 589 106763 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 590 106763 gdb_server.c:400 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashWrite:<binary-data-24-bytes>
+Debug: 591 106763 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 592 106770 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashWrite:80067a8:C:\Users\Hp\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\stm32f3-discovery-0.5.0\src\compass.rs
+Debug: 593 106770 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 594 106770 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vFlashDone
+Debug: 595 106770 target.c:1794 target_call_event_callbacks(): target event 26 (gdb-flash-write-start) for core stm32f3x.cpu
+Debug: 596 106771 core.c:939 flash_write_unlock_verify(): image_read_section: section = 0, t_section_num = 0, section_offset = 0, buffer_idx = 0, size_read = 36408
+Debug: 597 106771 target.c:2669 target_write_u32(): address: 0x40022004, value: 0x45670123
+Debug: 598 106771 target.c:2669 target_write_u32(): address: 0x40022004, value: 0xcdef89ab
+Debug: 599 106772 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000001
+Debug: 600 106773 target.c:1999 target_alloc_working_area_try(): MMU disabled, using physical address for working memory 0x20000000
+Debug: 601 106773 target.c:2053 target_alloc_working_area_try(): allocated new working area of 60 bytes at address 0x20000000
+Debug: 602 106773 target.c:1920 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 603 106773 target.c:1920 print_wa_layout():    0x2000003c-0x20003fff (16324 bytes)
+Debug: 604 106773 target.c:2363 target_write_buffer(): writing buffer of 60 byte at 0x20000000
+Debug: 605 106774 target.c:2053 target_alloc_working_area_try(): allocated new working area of 16324 bytes at address 0x2000003c
+Debug: 606 106774 target.c:1920 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 607 106774 target.c:1920 print_wa_layout():  * 0x2000003c-0x20003fff (16324 bytes)
+Debug: 608 106774 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000044
+Debug: 609 106775 target.c:2669 target_write_u32(): address: 0x20000040, value: 0x20000044
+Debug: 610 106776 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 611 106776 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 612 106776 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 613 106778 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write pmsk_bpri_fltmsk_ctrl value 0x00000001
+Debug: 614 106778 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 615 106779 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write xpsr value 0x01000000
+Debug: 616 106779 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 617 106780 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write pc value 0x20000000
+Debug: 618 106780 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 619 106782 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write r4 value 0x08000000
+Debug: 620 106782 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 621 106783 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write r3 value 0x20004000
+Debug: 622 106783 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 623 106784 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write r2 value 0x2000003c
+Debug: 624 106784 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 625 106785 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write r1 value 0x0000471c
+Debug: 626 106785 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 627 106786 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write r0 value 0x40022000
+Debug: 628 106787 target.c:1794 target_call_event_callbacks(): target event 18 (debug-resumed) for core stm32f3x.cpu
+Debug: 629 106787 cortex_m.c:1483 cortex_m_resume(): [stm32f3x.cpu] debug resumed at 0x20000000
+Debug: 630 106787 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 631 106788 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000044
+Debug: 632 106788 target.c:996 target_run_flash_async_algorithm(): offs 0x0 count 0x471c wp 0x20000044 rp 0x20000044
+Debug: 633 106788 target.c:2363 target_write_buffer(): writing buffer of 16312 byte at 0x20000044
+Debug: 634 107073 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003ffc
+Debug: 635 107076 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000007a
+Debug: 636 107076 target.c:996 target_run_flash_async_algorithm(): offs 0x3fb8 count 0x2740 wp 0x20003ffc rp 0x2000007a
+Debug: 637 107076 target.c:2363 target_write_buffer(): writing buffer of 4 byte at 0x20003ffc
+Debug: 638 107078 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000044
+Debug: 639 107082 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000013a
+Debug: 640 107082 target.c:996 target_run_flash_async_algorithm(): offs 0x3fbc count 0x273e wp 0x20000044 rp 0x2000013a
+Debug: 641 107082 target.c:2363 target_write_buffer(): writing buffer of 242 byte at 0x20000044
+Debug: 642 107089 arm_adi_v5.c:408 mem_ap_setup_transfer_verify_size_packing(): AP#0x0 probed size 2: supported
+Debug: 643 107090 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000136
+Debug: 644 107093 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200002fa
+Debug: 645 107093 target.c:996 target_run_flash_async_algorithm(): offs 0x40ae count 0x26c5 wp 0x20000136 rp 0x200002fa
+Debug: 646 107093 target.c:2363 target_write_buffer(): writing buffer of 450 byte at 0x20000136
+Debug: 647 107104 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200002f8
+Debug: 648 107107 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200004e8
+Debug: 649 107107 target.c:996 target_run_flash_async_algorithm(): offs 0x4270 count 0x25e4 wp 0x200002f8 rp 0x200004e8
+Debug: 650 107107 target.c:2363 target_write_buffer(): writing buffer of 492 byte at 0x200002f8
+Debug: 651 107116 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200004e4
+Debug: 652 107119 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200006c0
+Debug: 653 107119 target.c:996 target_run_flash_async_algorithm(): offs 0x445c count 0x24ee wp 0x200004e4 rp 0x200006c0
+Debug: 654 107119 target.c:2363 target_write_buffer(): writing buffer of 472 byte at 0x200004e4
+Debug: 655 107129 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200006bc
+Debug: 656 107131 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000088c
+Debug: 657 107131 target.c:996 target_run_flash_async_algorithm(): offs 0x4634 count 0x2402 wp 0x200006bc rp 0x2000088c
+Debug: 658 107131 target.c:2363 target_write_buffer(): writing buffer of 460 byte at 0x200006bc
+Debug: 659 107142 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000888
+Debug: 660 107145 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000a88
+Debug: 661 107145 target.c:996 target_run_flash_async_algorithm(): offs 0x4800 count 0x231c wp 0x20000888 rp 0x20000a88
+Debug: 662 107145 target.c:2363 target_write_buffer(): writing buffer of 508 byte at 0x20000888
+Debug: 663 107156 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000a84
+Debug: 664 107159 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000c98
+Debug: 665 107159 target.c:996 target_run_flash_async_algorithm(): offs 0x49fc count 0x221e wp 0x20000a84 rp 0x20000c98
+Debug: 666 107160 target.c:2363 target_write_buffer(): writing buffer of 528 byte at 0x20000a84
+Debug: 667 107171 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000c94
+Debug: 668 107174 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000ecc
+Debug: 669 107174 target.c:996 target_run_flash_async_algorithm(): offs 0x4c0c count 0x2116 wp 0x20000c94 rp 0x20000ecc
+Debug: 670 107175 target.c:2363 target_write_buffer(): writing buffer of 564 byte at 0x20000c94
+Debug: 671 107186 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000ec8
+Debug: 672 107190 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200010f8
+Debug: 673 107190 target.c:996 target_run_flash_async_algorithm(): offs 0x4e40 count 0x1ffc wp 0x20000ec8 rp 0x200010f8
+Debug: 674 107190 target.c:2363 target_write_buffer(): writing buffer of 556 byte at 0x20000ec8
+Debug: 675 107201 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200010f4
+Debug: 676 107205 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20001338
+Debug: 677 107205 target.c:996 target_run_flash_async_algorithm(): offs 0x506c count 0x1ee6 wp 0x200010f4 rp 0x20001338
+Debug: 678 107205 target.c:2363 target_write_buffer(): writing buffer of 576 byte at 0x200010f4
+Debug: 679 107216 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20001334
+Debug: 680 107220 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20001564
+Debug: 681 107220 target.c:996 target_run_flash_async_algorithm(): offs 0x52ac count 0x1dc6 wp 0x20001334 rp 0x20001564
+Debug: 682 107220 target.c:2363 target_write_buffer(): writing buffer of 556 byte at 0x20001334
+Debug: 683 107231 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20001560
+Debug: 684 107235 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000179e
+Debug: 685 107235 target.c:996 target_run_flash_async_algorithm(): offs 0x54d8 count 0x1cb0 wp 0x20001560 rp 0x2000179e
+Debug: 686 107235 target.c:2363 target_write_buffer(): writing buffer of 570 byte at 0x20001560
+Debug: 687 107247 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x2000179a
+Debug: 688 107249 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200019ca
+Debug: 689 107249 target.c:996 target_run_flash_async_algorithm(): offs 0x5712 count 0x1b93 wp 0x2000179a rp 0x200019ca
+Debug: 690 107249 target.c:2363 target_write_buffer(): writing buffer of 558 byte at 0x2000179a
+Debug: 691 107262 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200019c8
+Debug: 692 107264 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20001bf8
+Debug: 693 107264 target.c:996 target_run_flash_async_algorithm(): offs 0x5940 count 0x1a7c wp 0x200019c8 rp 0x20001bf8
+Debug: 694 107264 target.c:2363 target_write_buffer(): writing buffer of 556 byte at 0x200019c8
+Debug: 695 107275 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20001bf4
+Debug: 696 107278 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20001dfe
+Debug: 697 107278 target.c:996 target_run_flash_async_algorithm(): offs 0x5b6c count 0x1966 wp 0x20001bf4 rp 0x20001dfe
+Debug: 698 107278 target.c:2363 target_write_buffer(): writing buffer of 518 byte at 0x20001bf4
+Debug: 699 107290 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20001dfa
+Debug: 700 107293 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000202c
+Debug: 701 107293 target.c:996 target_run_flash_async_algorithm(): offs 0x5d72 count 0x1863 wp 0x20001dfa rp 0x2000202c
+Debug: 702 107293 target.c:2363 target_write_buffer(): writing buffer of 560 byte at 0x20001dfa
+Debug: 703 107307 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x2000202a
+Debug: 704 107310 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200022a8
+Debug: 705 107310 target.c:996 target_run_flash_async_algorithm(): offs 0x5fa2 count 0x174b wp 0x2000202a rp 0x200022a8
+Debug: 706 107310 target.c:2363 target_write_buffer(): writing buffer of 636 byte at 0x2000202a
+Debug: 707 107326 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200022a6
+Debug: 708 107330 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20002580
+Debug: 709 107330 target.c:996 target_run_flash_async_algorithm(): offs 0x621e count 0x160d wp 0x200022a6 rp 0x20002580
+Debug: 710 107330 target.c:2363 target_write_buffer(): writing buffer of 728 byte at 0x200022a6
+Debug: 711 107348 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x2000257e
+Debug: 712 107352 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200028ac
+Debug: 713 107352 target.c:996 target_run_flash_async_algorithm(): offs 0x64f6 count 0x14a1 wp 0x2000257e rp 0x200028ac
+Debug: 714 107352 target.c:2363 target_write_buffer(): writing buffer of 812 byte at 0x2000257e
+Debug: 715 107371 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200028aa
+Debug: 716 107375 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20002c0c
+Debug: 717 107375 target.c:996 target_run_flash_async_algorithm(): offs 0x6822 count 0x130b wp 0x200028aa rp 0x20002c0c
+Debug: 718 107375 target.c:2363 target_write_buffer(): writing buffer of 864 byte at 0x200028aa
+Debug: 719 107394 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20002c0a
+Debug: 720 107398 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20002f6e
+Debug: 721 107398 target.c:996 target_run_flash_async_algorithm(): offs 0x6b82 count 0x115b wp 0x20002c0a rp 0x20002f6e
+Debug: 722 107398 target.c:2363 target_write_buffer(): writing buffer of 866 byte at 0x20002c0a
+Debug: 723 107416 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20002f6c
+Debug: 724 107418 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20003282
+Debug: 725 107418 target.c:996 target_run_flash_async_algorithm(): offs 0x6ee4 count 0xfaa wp 0x20002f6c rp 0x20003282
+Debug: 726 107418 target.c:2363 target_write_buffer(): writing buffer of 786 byte at 0x20002f6c
+Debug: 727 107436 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x2000327e
+Debug: 728 107438 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20003574
+Debug: 729 107438 target.c:996 target_run_flash_async_algorithm(): offs 0x71f6 count 0xe21 wp 0x2000327e rp 0x20003574
+Debug: 730 107438 target.c:2363 target_write_buffer(): writing buffer of 756 byte at 0x2000327e
+Debug: 731 107456 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003572
+Debug: 732 107458 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000384a
+Debug: 733 107458 target.c:996 target_run_flash_async_algorithm(): offs 0x74ea count 0xca7 wp 0x20003572 rp 0x2000384a
+Debug: 734 107458 target.c:2363 target_write_buffer(): writing buffer of 726 byte at 0x20003572
+Debug: 735 107473 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003848
+Debug: 736 107474 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20003abe
+Debug: 737 107475 target.c:996 target_run_flash_async_algorithm(): offs 0x77c0 count 0xb3c wp 0x20003848 rp 0x20003abe
+Debug: 738 107475 target.c:2363 target_write_buffer(): writing buffer of 626 byte at 0x20003848
+Debug: 739 107487 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003aba
+Debug: 740 107490 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20003cee
+Debug: 741 107490 target.c:996 target_run_flash_async_algorithm(): offs 0x7a32 count 0xa03 wp 0x20003aba rp 0x20003cee
+Debug: 742 107490 target.c:2363 target_write_buffer(): writing buffer of 562 byte at 0x20003aba
+Debug: 743 107502 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003cec
+Debug: 744 107504 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20003f08
+Debug: 745 107504 target.c:996 target_run_flash_async_algorithm(): offs 0x7c64 count 0x8ea wp 0x20003cec rp 0x20003f08
+Debug: 746 107504 target.c:2363 target_write_buffer(): writing buffer of 536 byte at 0x20003cec
+Debug: 747 107516 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20003f04
+Debug: 748 107518 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000015c
+Debug: 749 107519 target.c:996 target_run_flash_async_algorithm(): offs 0x7e7c count 0x7de wp 0x20003f04 rp 0x2000015c
+Debug: 750 107519 target.c:2363 target_write_buffer(): writing buffer of 252 byte at 0x20003f04
+Debug: 751 107524 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000044
+Debug: 752 107528 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200002ba
+Debug: 753 107528 target.c:996 target_run_flash_async_algorithm(): offs 0x7f78 count 0x760 wp 0x20000044 rp 0x200002ba
+Debug: 754 107528 target.c:2363 target_write_buffer(): writing buffer of 626 byte at 0x20000044
+Debug: 755 107542 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200002b6
+Debug: 756 107545 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x2000053c
+Debug: 757 107545 target.c:996 target_run_flash_async_algorithm(): offs 0x81ea count 0x627 wp 0x200002b6 rp 0x2000053c
+Debug: 758 107545 target.c:2363 target_write_buffer(): writing buffer of 644 byte at 0x200002b6
+Debug: 759 107561 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x2000053a
+Debug: 760 107564 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200007f6
+Debug: 761 107564 target.c:996 target_run_flash_async_algorithm(): offs 0x846e count 0x4e5 wp 0x2000053a rp 0x200007f6
+Debug: 762 107564 target.c:2363 target_write_buffer(): writing buffer of 698 byte at 0x2000053a
+Debug: 763 107578 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x200007f4
+Debug: 764 107581 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000a84
+Debug: 765 107581 target.c:996 target_run_flash_async_algorithm(): offs 0x8728 count 0x388 wp 0x200007f4 rp 0x20000a84
+Debug: 766 107581 target.c:2363 target_write_buffer(): writing buffer of 652 byte at 0x200007f4
+Debug: 767 107593 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000a80
+Debug: 768 107595 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000caa
+Debug: 769 107595 target.c:996 target_run_flash_async_algorithm(): offs 0x89b4 count 0x242 wp 0x20000a80 rp 0x20000caa
+Debug: 770 107595 target.c:2363 target_write_buffer(): writing buffer of 550 byte at 0x20000a80
+Debug: 771 107607 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000ca6
+Debug: 772 107609 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000e9c
+Debug: 773 107609 target.c:996 target_run_flash_async_algorithm(): offs 0x8bda count 0x12f wp 0x20000ca6 rp 0x20000e9c
+Debug: 774 107609 target.c:2363 target_write_buffer(): writing buffer of 500 byte at 0x20000ca6
+Debug: 775 107620 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000e9a
+Debug: 776 107623 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200010a0
+Debug: 777 107623 target.c:996 target_run_flash_async_algorithm(): offs 0x8dce count 0x35 wp 0x20000e9a rp 0x200010a0
+Debug: 778 107623 target.c:2363 target_write_buffer(): writing buffer of 104 byte at 0x20000e9a
+Debug: 779 107627 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000f02
+Debug: 780 107629 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x200011a0
+Debug: 781 107629 target.c:996 target_run_flash_async_algorithm(): offs 0x8e36 count 0x1 wp 0x20000f02 rp 0x200011a0
+Debug: 782 107629 target.c:2363 target_write_buffer(): writing buffer of 2 byte at 0x20000f02
+Debug: 783 107630 target.c:2669 target_write_u32(): address: 0x2000003c, value: 0x20000f04
+Debug: 784 107632 target.c:3248 target_wait_state(): waiting for target halted...
+Debug: 785 108048 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 786 108050 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x3
+Debug: 787 108050 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 788 108063 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 789 108075 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 790 108089 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 791 108095 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 792 108095 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Thread at PC 0x2000003a, cpu in Non-Secure state, target->state: halted
+Debug: 793 108095 target.c:1794 target_call_event_callbacks(): target event 17 (debug-halted) for core stm32f3x.cpu
+Debug: 794 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register primask with value 0x00000000
+Debug: 795 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register pmsk_bpri_fltmsk_ctrl with value 0x00000000
+Debug: 796 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register xpsr with value 0x01000000
+Debug: 797 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register pc with value 0x08000194
+Debug: 798 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r7 with value 0x00000000
+Debug: 799 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r6 with value 0x00000000
+Debug: 800 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r5 with value 0x00000000
+Debug: 801 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r4 with value 0x00000000
+Debug: 802 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r3 with value 0x00000000
+Debug: 803 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r2 with value 0x00000000
+Debug: 804 108095 armv7m.c:734 armv7m_wait_algorithm(): [stm32f3x.cpu] restoring register r0 with value 0x00000000
+Debug: 805 108097 target.c:2581 target_read_u32(): address: 0x20000040, value: 0x20000f04
+Debug: 806 108097 target.c:2121 target_free_working_area_restore(): freed 16324 bytes of working area at address 0x2000003c
+Debug: 807 108097 target.c:1920 print_wa_layout():  * 0x20000000-0x2000003b (60 bytes)
+Debug: 808 108097 target.c:1920 print_wa_layout():    0x2000003c-0x20003fff (16324 bytes)
+Debug: 809 108097 target.c:2121 target_free_working_area_restore(): freed 60 bytes of working area at address 0x20000000
+Debug: 810 108097 target.c:1920 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 811 108097 target.c:2669 target_write_u32(): address: 0x40022010, value: 0x00000080
+Debug: 812 108099 target.c:1794 target_call_event_callbacks(): target event 27 (gdb-flash-write-end) for core stm32f3x.cpu
+Debug: 813 108099 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 27 (gdb-flash-write-end) action: reset halt
+Debug: 814 108099 command.c:86 script_debug(): command - reset halt
+Debug: 815 108101 target.c:1813 target_call_reset_callbacks(): target reset 2 (halt)
+Debug: 816 108101 command.c:86 script_debug(): command - target names
+Debug: 817 108101 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-start
+Debug: 818 108101 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 9 (reset-start) action:  adapter speed 950 
+Debug: 819 108101 command.c:86 script_debug(): command - adapter speed 950
+Debug: 820 108101 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 821 108101 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 822 108101 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 823 108102 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 824 108102 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 825 108102 command.c:86 script_debug(): command - transport select
+Debug: 826 108102 command.c:86 script_debug(): command - transport select
+Debug: 827 108102 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event examine-start
+Debug: 828 108102 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 19 (examine-start) action:  adapter speed 950 
+Debug: 829 108102 command.c:86 script_debug(): command - adapter speed 950
+Debug: 830 108102 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 831 108102 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 832 108102 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 833 108103 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 834 108103 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 835 108103 command.c:86 script_debug(): command - stm32f3x.cpu arp_examine allow-defer
+Debug: 836 108104 arm_adi_v5.c:942 mem_ap_init(): MEM_AP CFG: large data 0, long address 0, big-endian 0
+Debug: 837 108104 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event examine-end
+Debug: 838 108104 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 21 (examine-end) action:  stm32f3x_default_examine_end 
+Debug: 839 108104 command.c:86 script_debug(): command - read_memory 0xe0042004 32 1
+Debug: 840 108106 command.c:86 script_debug(): command - mww 0xe0042004 7
+Debug: 841 108108 command.c:86 script_debug(): command - read_memory 0xe0042008 32 1
+Debug: 842 108110 command.c:86 script_debug(): command - mww 0xe0042008 6144
+Debug: 843 108112 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-pre
+Debug: 844 108112 command.c:86 script_debug(): command - transport select
+Debug: 845 108112 command.c:86 script_debug(): command - stm32f3x.cpu arp_reset assert 1
+Debug: 846 108112 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 847 108112 target.c:1920 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 848 108112 cortex_m.c:1851 cortex_m_assert_reset(): [stm32f3x.cpu] target->state: halted, examined
+Debug: 849 108116 cortex_m.c:1971 cortex_m_assert_reset(): [stm32f3x.cpu] Using Cortex-M SYSRESETREQ
+Debug: 850 108117 arm_adi_v5.c:867 dap_dp_init_or_reconnect(): stm32f3x.dap
+Debug: 851 108118 arm_adi_v5.c:791 dap_dp_init(): stm32f3x.dap
+Debug: 852 108118 arm_adi_v5.c:824 dap_dp_init(): DAP: wait CDBGPWRUPACK
+Debug: 853 108118 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x20000000, value 0x20000000
+Debug: 854 108121 arm_adi_v5.c:832 dap_dp_init(): DAP: wait CSYSPWRUPACK
+Debug: 855 108121 arm_adi_v5.h:682 dap_dp_poll_register(): DAP: poll 4, mask 0x80000000, value 0x80000000
+Debug: 856 108205 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-assert-post
+Debug: 857 108205 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-pre
+Debug: 858 108205 command.c:86 script_debug(): command - transport select
+Debug: 859 108206 command.c:86 script_debug(): command - stm32f3x.cpu arp_reset deassert 1
+Debug: 860 108206 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 861 108206 target.c:1920 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 862 108206 cortex_m.c:2014 cortex_m_deassert_reset(): [stm32f3x.cpu] target->state: reset, examined
+Debug: 863 108206 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-deassert-post
+Debug: 864 108206 command.c:86 script_debug(): command - transport select
+Debug: 865 108206 command.c:86 script_debug(): command - stm32f3x.cpu was_examined
+Debug: 866 108206 command.c:86 script_debug(): command - stm32f3x.cpu arp_waitstate halted 1000
+Debug: 867 108209 cortex_m.c:1012 cortex_m_poll_one(): [stm32f3x.cpu] Exit from reset with dcb_dhcsr 0x30003
+Debug: 868 108210 cortex_m.c:619 cortex_m_endreset_event(): [stm32f3x.cpu] DCB_DEMCR = 0x01000501
+Debug: 869 108210 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 2 commands in 4 items
+Debug: 870 108212 target.c:2669 target_write_u32(): address: 0xe0002000, value: 0x00000003
+Debug: 871 108212 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 2 commands in 5 items
+Debug: 872 108215 target.c:2581 target_read_u32(): address: 0xe0002000, value: 0x00000261
+Debug: 873 108215 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 874 108216 target.c:2669 target_write_u32(): address: 0xe000200c, value: 0x00000000
+Debug: 875 108218 target.c:2669 target_write_u32(): address: 0xe0002010, value: 0x00000000
+Debug: 876 108219 target.c:2669 target_write_u32(): address: 0xe0002014, value: 0x00000000
+Debug: 877 108220 target.c:2669 target_write_u32(): address: 0xe0002018, value: 0x00000000
+Debug: 878 108221 target.c:2669 target_write_u32(): address: 0xe000201c, value: 0x00000000
+Debug: 879 108222 target.c:2669 target_write_u32(): address: 0xe0002020, value: 0x00000000
+Debug: 880 108223 target.c:2669 target_write_u32(): address: 0xe0002024, value: 0x00000000
+Debug: 881 108223 target.c:2669 target_write_u32(): address: 0xe0001020, value: 0x00000000
+Debug: 882 108224 target.c:2669 target_write_u32(): address: 0xe0001024, value: 0x00000000
+Debug: 883 108225 target.c:2669 target_write_u32(): address: 0xe0001028, value: 0x00000000
+Debug: 884 108226 target.c:2669 target_write_u32(): address: 0xe0001030, value: 0x00000000
+Debug: 885 108226 target.c:2669 target_write_u32(): address: 0xe0001034, value: 0x00000000
+Debug: 886 108227 target.c:2669 target_write_u32(): address: 0xe0001038, value: 0x00000000
+Debug: 887 108228 target.c:2669 target_write_u32(): address: 0xe0001040, value: 0x00000000
+Debug: 888 108229 target.c:2669 target_write_u32(): address: 0xe0001044, value: 0x00000000
+Debug: 889 108229 target.c:2669 target_write_u32(): address: 0xe0001048, value: 0x00000000
+Debug: 890 108230 target.c:2669 target_write_u32(): address: 0xe0001050, value: 0x00000000
+Debug: 891 108231 target.c:2669 target_write_u32(): address: 0xe0001054, value: 0x00000000
+Debug: 892 108231 target.c:2669 target_write_u32(): address: 0xe0001058, value: 0x00000000
+Debug: 893 108233 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 894 108235 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x9
+Debug: 895 108236 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 896 108248 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 897 108262 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 898 108274 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 899 108280 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 900 108280 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Thread at PC 0x8000194, cpu in Non-Secure state, target->state: halted
+Debug: 901 108280 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 902 108280 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+User : 903 108280 armv7m.c:771 armv7m_arch_state(): [stm32f3x.cpu] halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08000194 msp: 0x2000a000
+Debug: 904 108280 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 905 108280 command.c:86 script_debug(): command - stm32f3x.cpu curstate
+Debug: 906 108281 command.c:86 script_debug(): command - stm32f3x.cpu invoke-event reset-end
+Debug: 907 108281 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 16 (reset-end) action:  adapter speed 950 
+Debug: 908 108281 command.c:86 script_debug(): command - adapter speed 950
+Debug: 909 108281 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 910 108281 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 911 108281 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 912 108281 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 913 108281 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 914 108282 gdb_server.c:3478 gdb_v_packet(): wrote 36408 bytes from vFlash image to flash
+Debug: 915 108283 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 916 108293 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 917 108293 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00020ffffffff9401000800000001#7a
+Debug: 918 108293 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Pf=94010008
+Debug: 919 108294 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 920 108330 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m800026c,2
+Debug: 921 108331 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x000000000800026c, len: 0x00000002
+Debug: 922 108331 target.c:2428 target_read_buffer(): reading buffer of 2 byte at 0x0800026c
+Debug: 923 108331 arm_adi_v5.c:408 mem_ap_setup_transfer_verify_size_packing(): AP#0x0 probed size 2: supported
+Debug: 924 108333 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $00f0#f6
+Debug: 925 108349 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Z1,800026c,2
+Debug: 926 108349 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 927 108349 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x4800026d
+Debug: 928 108349 cortex_m.c:2078 cortex_m_set_breakpoint(): [stm32f3x.cpu] fpc_num 0 fpcr_value 0x4800026d
+Debug: 929 108349 cortex_m.c:2114 cortex_m_set_breakpoint(): [stm32f3x.cpu] BPID: 0, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 930 108349 breakpoints.c:93 breakpoint_add_internal(): [stm32f3x.cpu] added hardware breakpoint at 0x0800026c of length 0x00000002, (BPID: 0)
+Debug: 931 108349 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 932 108350 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont;c
+Debug: 933 108350 gdb_server.c:3080 gdb_handle_vcont_packet(): [stm32f3x.cpu] target continue
+Debug: 934 108350 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 935 108350 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 936 108350 target.c:1920 print_wa_layout():    0x20000000-0x20003fff (16384 bytes)
+Debug: 937 108350 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 938 108350 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 3 commands in 6 items
+Debug: 939 108351 armv7m.c:469 armv7m_write_core_reg(): [stm32f3x.cpu] write pc value 0x08000194
+Debug: 940 108352 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 941 108352 cortex_m.c:1483 cortex_m_resume(): [stm32f3x.cpu] resumed at 0x08000194
+Debug: 942 108352 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 943 108352 target.c:1794 target_call_event_callbacks(): target event 7 (gdb-start) for core stm32f3x.cpu
+Debug: 944 108392 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 945 108395 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x3
+Debug: 946 108396 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 947 108409 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 948 108421 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 949 108434 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 950 108439 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 951 108439 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Thread at PC 0x800026c, cpu in Non-Secure state, target->state: halted
+Debug: 952 108439 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 953 108439 gdb_server.c:179 gdb_last_signal(): [stm32f3x.cpu] Debug reason is: BREAKPOINT
+Debug: 954 108439 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $T05#b9
+Debug: 955 108440 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 956 108440 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 957 108440 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 958 108440 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0000f00088ed00e088ed00e000000000000000000000000000000000e89f00200000000000000000000000000000000000000000e89f00207f4900086c02000800000041#a8
+Debug: 959 108440 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 960 108440 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 961 108441 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: z1,800026c,2
+Debug: 962 108441 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 963 108441 cortex_m.c:2135 cortex_m_unset_breakpoint(): [stm32f3x.cpu] BPID: 0, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 964 108441 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 965 108442 breakpoints.c:300 breakpoint_free(): [stm32f3x.cpu] free BPID: 0 --> 0
+Debug: 966 108442 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 967 108442 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m800026c,4
+Debug: 968 108442 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x000000000800026c, len: 0x00000004
+Debug: 969 108442 target.c:2428 target_read_buffer(): reading buffer of 4 byte at 0x0800026c
+Debug: 970 108443 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $00f000f8#f4
+Debug: 971 108459 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont;s:0;c:0
+Debug: 972 108460 gdb_server.c:3160 gdb_handle_vcont_packet(): request to step current core only
+Debug: 973 108460 gdb_server.c:3168 gdb_handle_vcont_packet(): [stm32f3x.cpu] single-step thread 0
+Debug: 974 108460 target.c:1794 target_call_event_callbacks(): target event 7 (gdb-start) for core stm32f3x.cpu
+Debug: 975 108460 target.c:1794 target_call_event_callbacks(): target event 5 (step-start) for core stm32f3x.cpu
+Debug: 976 108461 target.c:2605 target_read_u16(): address: 0x0800026c, value: 0xf000
+Debug: 977 108461 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 978 108461 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 979 108461 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x4800026d
+Debug: 980 108462 cortex_m.c:2078 cortex_m_set_breakpoint(): [stm32f3x.cpu] fpc_num 0 fpcr_value 0x4800026d
+Debug: 981 108462 cortex_m.c:2114 cortex_m_set_breakpoint(): [stm32f3x.cpu] BPID: 1, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 982 108462 breakpoints.c:93 breakpoint_add_internal(): [stm32f3x.cpu] added hardware breakpoint at 0x0800026c of length 0x00000002, (BPID: 1)
+Debug: 983 108462 cortex_m.c:1611 cortex_m_step(): [stm32f3x.cpu] Starting core to serve pending interrupts
+Debug: 984 108464 cortex_m.c:2135 cortex_m_unset_breakpoint(): [stm32f3x.cpu] BPID: 1, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 985 108464 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 986 108465 breakpoints.c:300 breakpoint_free(): [stm32f3x.cpu] free BPID: 1 --> 0
+Debug: 987 108468 cortex_m.c:1670 cortex_m_step(): [stm32f3x.cpu] target stepped dcb_dhcsr = 0x1030007 nvic_icsr = 0x0
+Debug: 988 108468 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 989 108471 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x3
+Debug: 990 108471 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 991 108484 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 992 108496 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 993 108509 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 994 108515 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 995 108516 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Thread at PC 0x8000270, cpu in Non-Secure state, target->state: halted
+Debug: 996 108516 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 997 108516 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 998 108516 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 999 108516 cortex_m.c:1679 cortex_m_step(): [stm32f3x.cpu] target stepped dcb_dhcsr = 0x30003 nvic_icsr = 0x0
+Debug: 1000 108516 target.c:1794 target_call_event_callbacks(): target event 6 (step-end) for core stm32f3x.cpu
+Debug: 1001 108517 gdb_server.c:179 gdb_last_signal(): [stm32f3x.cpu] Debug reason is: SINGLESTEP
+Debug: 1002 108517 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $T05#b9
+Debug: 1003 108518 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 1004 108518 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0000f00088ed00e088ed00e000000000000000000000000000000000e89f00200000000000000000000000000000000000000000e89f0020710200087002000800000041#36
+Debug: 1005 108518 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Z1,800026c,2
+Debug: 1006 108518 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1007 108518 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x4800026d
+Debug: 1008 108519 cortex_m.c:2078 cortex_m_set_breakpoint(): [stm32f3x.cpu] fpc_num 0 fpcr_value 0x4800026d
+Debug: 1009 108519 cortex_m.c:2114 cortex_m_set_breakpoint(): [stm32f3x.cpu] BPID: 2, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 1010 108519 breakpoints.c:93 breakpoint_add_internal(): [stm32f3x.cpu] added hardware breakpoint at 0x0800026c of length 0x00000002, (BPID: 2)
+Debug: 1011 108519 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1012 108519 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont;c
+Debug: 1013 108519 gdb_server.c:3080 gdb_handle_vcont_packet(): [stm32f3x.cpu] target continue
+Debug: 1014 108519 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1015 108519 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1016 108519 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 1017 108520 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 1018 108520 cortex_m.c:1483 cortex_m_resume(): [stm32f3x.cpu] resumed at 0x08000270
+Debug: 1019 108520 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1020 108520 target.c:1794 target_call_event_callbacks(): target event 7 (gdb-start) for core stm32f3x.cpu
+Debug: 1021 109020 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1022 109522 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1023 110023 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1024 110539 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1025 111056 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1026 111558 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1027 112071 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1028 112573 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1029 113074 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1030 113578 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1031 114089 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1032 114591 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1033 115094 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1034 115599 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1035 116112 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1036 116616 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1037 117120 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1038 117634 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1039 118149 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1040 118664 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1041 119168 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1042 119684 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1043 120186 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1044 120703 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1045 121219 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1046 121722 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1047 122237 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1048 122739 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1049 123240 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1050 123755 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1051 124261 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1052 124764 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1053 125265 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1054 125772 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1055 126288 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1056 126797 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1057 127312 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1058 127826 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1059 128331 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1060 128838 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1061 128925 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: <Ctrl-C>
+Debug: 1062 128925 cortex_m.c:1203 cortex_m_halt_one(): [stm32f3x.cpu] target->state: running
+Debug: 1063 128927 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 1064 128930 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x1
+Debug: 1065 128931 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1066 128944 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1067 128956 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 1068 128969 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 1069 128974 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 1070 128976 cortex_m.c:800 cortex_m_examine_exception_reason(): [stm32f3x.cpu] SysTick SHCSR 0x800, SR 0x0, CFSR 0xffffffff, AR 0xffffffff
+Debug: 1071 128976 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Handler at PC 0x8004994, cpu in Non-Secure state, target->state: halted
+Debug: 1072 128976 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 1073 128976 gdb_server.c:824 gdb_signal_reply(): [stm32f3x.cpu] Responding with signal 2 (SIGINT) to debugger due to Ctrl-C
+Debug: 1074 128976 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $T02#b6
+Debug: 1075 128976 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 1076 128976 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 1077 128976 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 1078 128976 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0400000004000000c0fe0000c041000000127a0000127a0000127a00f89e0020000000000000000000000000000000001f9e0020f09e002095490008944900080f000001#f6
+Debug: 1079 128976 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 1080 128976 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 1081 128983 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: z1,800026c,2
+Debug: 1082 128983 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1083 128983 cortex_m.c:2135 cortex_m_unset_breakpoint(): [stm32f3x.cpu] BPID: 2, Type: 0, Address: 0x0800026c Length: 2 (n=0)
+Debug: 1084 128983 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 1085 128983 breakpoints.c:300 breakpoint_free(): [stm32f3x.cpu] free BPID: 2 --> 0
+Debug: 1086 128983 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1087 128984 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m8004994,4
+Debug: 1088 128984 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000008004994, len: 0x00000004
+Debug: 1089 128984 target.c:2428 target_read_buffer(): reading buffer of 4 byte at 0x08004994
+Debug: 1090 128984 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $f7e780b5#38
+Debug: 1091 573904 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m8000368,2
+Debug: 1092 573904 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000008000368, len: 0x00000002
+Debug: 1093 573904 target.c:2428 target_read_buffer(): reading buffer of 2 byte at 0x08000368
+Debug: 1094 573905 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $02f0#f8
+Debug: 1095 584785 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Z1,8000368,2
+Debug: 1096 584785 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1097 584785 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x48000369
+Debug: 1098 584785 cortex_m.c:2078 cortex_m_set_breakpoint(): [stm32f3x.cpu] fpc_num 0 fpcr_value 0x48000369
+Debug: 1099 584786 cortex_m.c:2114 cortex_m_set_breakpoint(): [stm32f3x.cpu] BPID: 3, Type: 0, Address: 0x08000368 Length: 2 (n=0)
+Debug: 1100 584786 breakpoints.c:93 breakpoint_add_internal(): [stm32f3x.cpu] added hardware breakpoint at 0x08000368 of length 0x00000002, (BPID: 3)
+Debug: 1101 584786 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1102 584786 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont;c
+Debug: 1103 584786 gdb_server.c:3080 gdb_handle_vcont_packet(): [stm32f3x.cpu] target continue
+Debug: 1104 584786 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1105 584786 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1106 584786 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 1107 584787 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 1108 584787 cortex_m.c:1483 cortex_m_resume(): [stm32f3x.cpu] resumed at 0x08004994
+Debug: 1109 584787 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1110 584787 target.c:1794 target_call_event_callbacks(): target event 7 (gdb-start) for core stm32f3x.cpu
+Debug: 1111 585299 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1112 585805 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1113 586316 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1114 586819 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1115 587335 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1116 587851 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1117 588367 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1118 588868 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1119 589370 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1120 589872 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1121 590373 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1122 590887 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1123 590911 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: <Ctrl-C>
+Debug: 1124 590911 cortex_m.c:1203 cortex_m_halt_one(): [stm32f3x.cpu] target->state: running
+Debug: 1125 590914 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 1126 590918 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x1
+Debug: 1127 590919 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1128 590932 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1129 590946 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 1130 590959 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 1131 590965 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 1132 590967 cortex_m.c:800 cortex_m_examine_exception_reason(): [stm32f3x.cpu] SysTick SHCSR 0x800, SR 0x0, CFSR 0xffffffff, AR 0xffffffff
+Debug: 1133 590967 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Handler at PC 0x800491e, cpu in Non-Secure state, target->state: halted
+Debug: 1134 590967 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 1135 590967 gdb_server.c:824 gdb_signal_reply(): [stm32f3x.cpu] Responding with signal 2 (SIGINT) to debugger due to Ctrl-C
+Debug: 1136 590967 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $T02#b6
+Debug: 1137 590967 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 1138 590967 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 1139 590969 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 1140 590969 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0400000080830000c0fe0000c041000000127a0000127a0000127a00e89e0020000000000000000000000000000000001f9e0020c09e0020954900081e4900080f000001#2a
+Debug: 1141 590970 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 1142 590970 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 1143 590989 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: z1,8000368,2
+Debug: 1144 590989 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1145 590989 cortex_m.c:2135 cortex_m_unset_breakpoint(): [stm32f3x.cpu] BPID: 3, Type: 0, Address: 0x08000368 Length: 2 (n=0)
+Debug: 1146 590989 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 1147 590990 breakpoints.c:300 breakpoint_free(): [stm32f3x.cpu] free BPID: 3 --> 0
+Debug: 1148 590990 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1149 633627 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: Z1,8000368,2
+Debug: 1150 633627 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1151 633627 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x48000369
+Debug: 1152 633628 cortex_m.c:2078 cortex_m_set_breakpoint(): [stm32f3x.cpu] fpc_num 0 fpcr_value 0x48000369
+Debug: 1153 633628 cortex_m.c:2114 cortex_m_set_breakpoint(): [stm32f3x.cpu] BPID: 4, Type: 0, Address: 0x08000368 Length: 2 (n=0)
+Debug: 1154 633628 breakpoints.c:93 breakpoint_add_internal(): [stm32f3x.cpu] added hardware breakpoint at 0x08000368 of length 0x00000002, (BPID: 4)
+Debug: 1155 633628 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1156 633629 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: vCont;c
+Debug: 1157 633629 gdb_server.c:3080 gdb_handle_vcont_packet(): [stm32f3x.cpu] target continue
+Debug: 1158 633629 target.c:1794 target_call_event_callbacks(): target event 3 (resume-start) for core stm32f3x.cpu
+Debug: 1159 633629 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1160 633629 armv7m.c:199 armv7m_restore_context(): [stm32f3x.cpu]  
+Debug: 1161 633629 target.c:1794 target_call_event_callbacks(): target event 2 (resumed) for core stm32f3x.cpu
+Debug: 1162 633629 cortex_m.c:1483 cortex_m_resume(): [stm32f3x.cpu] resumed at 0x0800491e
+Debug: 1163 633629 target.c:1794 target_call_event_callbacks(): target event 4 (resume-end) for core stm32f3x.cpu
+Debug: 1164 633629 target.c:1794 target_call_event_callbacks(): target event 7 (gdb-start) for core stm32f3x.cpu
+Debug: 1165 634140 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1166 634653 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1167 635161 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1168 635662 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1169 636177 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1170 636685 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1171 637199 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1172 637701 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1173 638205 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1174 638706 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1175 639208 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1176 639723 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1177 640227 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1178 640743 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1179 641260 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1180 641775 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1181 642291 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1182 642795 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1183 643312 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1184 643829 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1185 644330 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1186 644846 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1187 645348 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1188 645864 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1189 646367 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1190 646883 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1191 647387 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1192 647903 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1193 648416 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1194 648918 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1195 649421 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1196 649932 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1197 650439 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1198 650941 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1199 651456 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1200 651973 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1201 652486 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $O#4f
+Debug: 1202 652925 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: <Ctrl-C>
+Debug: 1203 652925 cortex_m.c:1203 cortex_m_halt_one(): [stm32f3x.cpu] target->state: running
+Debug: 1204 652928 cortex_m.c:852 cortex_m_debug_entry(): [stm32f3x.cpu]  
+Debug: 1205 652932 cortex_m.c:557 cortex_m_clear_halt(): [stm32f3x.cpu] NVIC_DFSR 0x1
+Debug: 1206 652933 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1207 652946 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 64 items
+Debug: 1208 652959 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 47 commands in 63 items
+Debug: 1209 652972 stlink_usb.c:4377 stlink_usb_misc_rw_segment(): Queue: 18 commands in 25 items
+Debug: 1210 652979 cortex_m.c:359 cortex_m_fast_read_all_regs(): [stm32f3x.cpu] read 53 32-bit registers
+Debug: 1211 652981 cortex_m.c:800 cortex_m_examine_exception_reason(): [stm32f3x.cpu] SysTick SHCSR 0x800, SR 0x0, CFSR 0xffffffff, AR 0xffffffff
+Debug: 1212 652981 cortex_m.c:922 cortex_m_debug_entry(): [stm32f3x.cpu] entered debug state in core mode: Handler at PC 0x8004924, cpu in Non-Secure state, target->state: halted
+Debug: 1213 652981 target.c:1794 target_call_event_callbacks(): target event 0 (gdb-halt) for core stm32f3x.cpu
+Debug: 1214 652981 gdb_server.c:824 gdb_signal_reply(): [stm32f3x.cpu] Responding with signal 2 (SIGINT) to debugger due to Ctrl-C
+Debug: 1215 652981 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $T02#b6
+Debug: 1216 652981 target.c:1794 target_call_event_callbacks(): target event 1 (halted) for core stm32f3x.cpu
+Debug: 1217 652981 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 1218 652983 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: g
+Debug: 1219 652983 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $0400000080830008c0fe0000c041000000127a0000127a0000127a00e89e0020000000000000000000000000000000001f9e0020c09e002095490008244900080f000001#02
+Debug: 1220 652984 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: qXfer:threads:read::0,1000
+Debug: 1221 652984 gdb_server.c:422 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $<binary-data-44-bytes>#02
+Debug: 1222 653008 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: z1,8000368,2
+Debug: 1223 653008 gdb_server.c:1789 gdb_breakpoint_watchpoint_packet(): [stm32f3x.cpu]
+Debug: 1224 653008 cortex_m.c:2135 cortex_m_unset_breakpoint(): [stm32f3x.cpu] BPID: 4, Type: 0, Address: 0x08000368 Length: 2 (n=0)
+Debug: 1225 653008 target.c:2669 target_write_u32(): address: 0xe0002008, value: 0x00000000
+Debug: 1226 653009 breakpoints.c:300 breakpoint_free(): [stm32f3x.cpu] free BPID: 4 --> 0
+Debug: 1227 653009 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $OK#9a
+Debug: 1228 653009 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m8004924,4
+Debug: 1229 653009 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000008004924, len: 0x00000004
+Debug: 1230 653009 target.c:2428 target_read_buffer(): reading buffer of 4 byte at 0x08004924
+Debug: 1231 653010 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $c0b20190#f1
+Debug: 1232 653020 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: p11
+Debug: 1233 653020 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $c09e0020#f3
+Debug: 1234 653020 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: p12
+Debug: 1235 653021 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $00000000#80
+Debug: 1236 653021 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m20009ec0,40
+Debug: 1237 653021 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000020009ec0, len: 0x00000040
+Debug: 1238 653021 target.c:2428 target_read_buffer(): reading buffer of 64 byte at 0x20009ec0
+Debug: 1239 653022 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $d49e002004000000c04100202d0040fbc0fec0410040fbc0fec0412840fbc0fe0c9f000480830008f89e002095490008289f0020512e0004209f0020f9ffffff#08
+Debug: 1240 653023 gdb_server.c:408 gdb_log_incoming_packet(): [stm32f3x.cpu] {1} received packet: m8004994,4
+Debug: 1241 653023 gdb_server.c:1560 gdb_read_memory_packet(): addr: 0x0000000008004994, len: 0x00000004
+Debug: 1242 653023 target.c:2428 target_read_buffer(): reading buffer of 4 byte at 0x08004994
+Debug: 1243 653023 gdb_server.c:425 gdb_log_outgoing_packet(): [stm32f3x.cpu] {1} sending packet: $f7e780b5#38
+Debug: 1244 852977 server.c:608 sig_handler(): Terminating on Signal 2
+Debug: 1245 852988 command.c:86 script_debug(): command - shutdown
+User : 1246 852988 server.c:760 handle_shutdown_command(): shutdown command invoked
+Debug: 1247 852989 gdb_server.c:1134 gdb_connection_closed(): [stm32f3x.cpu] {1} GDB Close, state: halted, gdb_actual_connections=0
+Debug: 1248 852989 target.c:1794 target_call_event_callbacks(): target event 8 (gdb-end) for core stm32f3x.cpu
+Debug: 1249 852989 target.c:1794 target_call_event_callbacks(): target event 23 (gdb-detach) for core stm32f3x.cpu
+Debug: 1250 852989 target.c:4782 target_handle_event(): target: stm32f3x.cpu (cortex_m) event: 23 (gdb-detach) action:  adapter speed 950 
+Debug: 1251 852989 command.c:86 script_debug(): command - adapter speed 950
+Debug: 1252 852989 adapter.c:252 adapter_config_khz(): handle adapter khz
+Debug: 1253 852989 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 1254 852989 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 1255 852989 adapter.c:215 adapter_khz_to_speed(): convert khz to adapter specific speed value
+Debug: 1256 852989 adapter.c:219 adapter_khz_to_speed(): have adapter set up
+Debug: 1257 852989 breakpoints.c:328 breakpoint_remove_all_internal(): [stm32f3x.cpu] Delete all breakpoints
+Debug: 1258 852989 arm_adi_v5.c:1226 dap_put_ap(): refcount AP#0x0 put 0
+Debug: 1259 852989 target.c:2150 target_free_all_working_areas_restore(): freeing all working areas
+Debug: 1260 852991 stlink_usb.c:5160 stlink_dap_quit(): stlink_dap_quit()
+Debug: 1261 852991 stlink_usb.c:1696 stlink_usb_exit_mode(): MODE: 0x02

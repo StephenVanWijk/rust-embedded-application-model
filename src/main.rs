@@ -23,9 +23,10 @@ use cortex_m::peripheral::syst::SystClkSource;
 use cortex_m_rt::{entry, exception};
 use stm32f3_discovery::stm32f3xx_hal::prelude::*;
 use stm32f3_discovery::stm32f3xx_hal::pac;
+use stm32f3_discovery::accelerometer::RawAccelerometer; // Imports the trait providing the accel_raw() method.
+use stm32f3_discovery::compass::Compass; // Imports the driver for the LSM303DLHC accelerometer and magnetometer.
 use panic_itm as _;
-// Import the function to enter low-power sleep waiting for an interrupt.
-use stm32f3_discovery::wait_for_interrupt; 
+use stm32f3_discovery::wait_for_interrupt; // Import the function to enter low-power sleep waiting for an interrupt. 
 
 // Entry Point.
 // Marks the following function as the Cortex-M program entry point,
@@ -38,7 +39,7 @@ fn main() -> !{
     let device_periphs = pac::Peripherals::take().unwrap(); 
     // Takes the RCC peripheral and applies the "constrain" pattern,
     // converting it into a struct that provides a safe interface for clock configuration.
-    let reset_and_clock_control = device_periphs.RCC.constrain();
+    let mut reset_and_clock_control = device_periphs.RCC.constrain();
 
     // Takes exclusive ownership of the core peripherals (SysTick, NVIC, ITM)
     // provided by the Cortex-M processor.
@@ -51,14 +52,36 @@ fn main() -> !{
     // to account for the new clock speed.
     let clocks = reset_and_clock_control.cfgr.freeze(&mut flash.acr);
 
-        // Setup 1 second systick.
+    // Setup one second system tick.
     let mut syst = core_periphs.SYST;
     syst.set_clock_source(SystClkSource::Core);
     syst.set_reload(8_000_000); // period = 1s
     syst.enable_counter();
     syst.enable_interrupt();
 
+    // GPIO and I2C Peripheral Configuration:
+    // Splits the GPIOB peripheral into individual pins. The AHB bus register is passed to enable the GPIOB clock.
+    let mut gpiob = device_periphs.GPIOB.split(&mut reset_and_clock_control.ahb);
+    // Compass (LSM303DLHC) Driver Initialization:
+    // Constructs a new Compass driver instance.
+    let mut compass = Compass::new(
+        gpiob.pb6, // Provides Pin PB6 for the I2C SCL line.
+        gpiob.pb7, //Provides Pin PB7 for the I2C SDA line.
+        &mut gpiob.moder, // Provides access to the GPIO mode register to set the pin alternate functions.
+        &mut gpiob.afrl, // Provides access to the alternate function low register to select the I2C function for the pins.
+        device_periphs.I2C1, // Provides the I2C1 peripheral.
+        clocks, // Provides the clock configuration to compute I2C timing.
+        &mut reset_and_clock_control.apb1) // Provides access to the APB1 bus register to enable the I2C1 clock.
+        .unwrap(); // Unwraps the Result, panicking if I2C initialization fails.
+
     loop{
+        let accel = compass.accel_raw().unwrap(); // Reads the raw accelerometer values (X, Y, Z) over I2C. Unwraps the Result, panicking on an I2C error.
+        // cortex_m::asm::nop();
         wait_for_interrupt();
     }
 }
+
+#[exception] //- Attribute denoting this function as an exception (interrupt) handler for the SysTick exception.
+fn SysTick() { //- Defines the handler function.
+   cortex_m::asm::nop(); 
+}//- A no-operation instruction. It ensures the handler is not optimized out and provides a minimal breakpoint location. The primary function of the interrupt is to wake the core from the WFI sleep in the main loop.

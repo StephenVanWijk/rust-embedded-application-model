@@ -17,3 +17,4 @@ rustflags = []
 
 [profile.dev]
 opt-level = 0
+debug = 2
