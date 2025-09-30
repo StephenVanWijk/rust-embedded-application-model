@@ -1,9 +1,9 @@
-set log_output to "STM32F303_PCB_KanbanDPE_20250910_1339.log"
+set log_output to "Compass_20250925_1013CET_SDvW.log"
 adapter speed: 950 kHz
 Info : Listening on port 6666 for tcl connections
 Info : Listening on port 4444 for telnet connections
 Info : STLINK V2J37M26 (API v2) VID:PID 0483:374B
-Info : Target voltage: 2.917842
+Info : Target voltage: 2.910940
 Info : clock speed 950 kHz
 Info : stlink_dap_op_connect(connect)
 Info : SWD DPIDR 0x2ba01477

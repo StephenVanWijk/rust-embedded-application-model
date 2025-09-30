@@ -1,5 +1,0 @@
-set log_output to "STM32F303_PCB_KanbanDPE_20250910.log"
-Info : Listening on port 6666 for tcl connections
-Info : Listening on port 4444 for telnet connections
-Error: open failed
-
