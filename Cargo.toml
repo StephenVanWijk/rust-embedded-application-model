@@ -4,6 +4,14 @@ authors = ["StephenVanWijk <stephenvanwijk6@gmail.com>"]
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "rust-embedded-application-model"
+path = "src/main.rs"
+
+[lib]
+name = "compass_trail"
+path = "src/lib.rs"
+
 [dependencies]
 cortex-m = "0.6.4"
 cortex-m-rt = "0.6.14"
