@@ -18,13 +18,15 @@
 
 use panic_itm as _;
 use cortex_m_rt::entry;
+use stm32f3_discovery::stm32f3xx_hal::pac;
 use stm32f3_discovery::wait_for_interrupt;
 
-use compass_trail::magnetometer_communication_ini;
+use compass_trail::magnetometer_communication_init;
 
 #[entry]
 fn main() -> ! {
-    magnetometer_communication_ini();
+    let device_periphs = pac::Peripherals::take().unwrap();
+    magnetometer_communication_init();
     loop {
         wait_for_interrupt();
     }

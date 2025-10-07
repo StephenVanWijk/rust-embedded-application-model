@@ -12,12 +12,12 @@ use cortex_m_rt::entry;
 
 #[entry]
 fn main() -> !{
-        let device_periphs = pac::Peripherals::take().unwrap();
+    let device_periphs = pac::Peripherals::take().unwrap();
     let mut rcc = device_periphs.RCC.constrain();
 
     let core_periphs = cortex_m::Peripherals::take().unwrap();
     let mut flash = device_periphs.FLASH.constrain();
-    // 
+    
     let clocks = rcc.cfgr.freeze(&mut flash.acr);
     let mut delay = Delay::new(core_periphs.SYST, clocks);
 
