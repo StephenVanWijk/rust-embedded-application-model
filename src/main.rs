@@ -40,6 +40,7 @@ fn main() -> ! {
 // Configure system clock for required peripheral operation
 
 // SPI Communication Setup
+// Lower chip select (CS) pin
 // Configure SPI1 in master mode with appropriate clock polarity/phase
 // Set clock frequency compatible with LSM303AGR (≤10MHz)
 // Configure GPIO alternate functions for SPI pins
@@ -61,13 +62,11 @@ fn main() -> ! {
 // Convert raw data to magnetic field values
 
 // SPI Transaction Sequence
-// Lower chip select (CS) pin
 // Send register address with read bit set
 // Receive data bytes
-// Raise CS pin
 
 /* TransitionDPE */
-
+// Raise CS pin
 // Data Processing
 // Calculate heading from magnetometer X/Y axes: heading = atan2(Y, X)
 // Convert heading from radians to degrees (0°-360°)

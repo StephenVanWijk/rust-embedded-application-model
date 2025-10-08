@@ -6,6 +6,8 @@
 
 use stm32f3_discovery::stm32f3xx_hal::{pac, prelude::*};
 use stm32f3_discovery::stm32f3xx_hal::spi::{Spi, Mode, Phase, Polarity};
+use lsm303agr::{Lsm303agr, AccelOutputDataRate, MagOutputDataRate};
+use lsm303agr::
 
 pub fn compass_rose_init() {
     // Clock Setup
@@ -19,12 +21,12 @@ pub fn magnetometer_communication_init() {
     let mcu_peripherals = pac::Peripherals::take().unwrap();
     let mut flash = mcu_peripherals.FLASH.constrain();
 
+    // Lower chip select (CS) pin
     /*  
     Clock Setup
     Enable GPIO clocks for SPI pins
     I don't understand this, I think I need one clock for SPI,Enable SPI1 peripheral clock
     */
-
     // Reset and Clock Control made in a Rust object that is usable
     let mut rcc = mcu_peripherals.RCC.constrain();
 
@@ -67,7 +69,7 @@ pub fn magnetometer_communication_init() {
         );
 
     // Magnetometer Initialization
-    // Configure magnetometer via SPI writes:
+    // Configure magnetometer via SPI writes
     // Set output data rate and operating mode
     // Enable temperature sensor for calibration
     // Configure data ready interrupts
