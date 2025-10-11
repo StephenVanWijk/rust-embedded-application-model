@@ -12,18 +12,17 @@ use cortex_m_rt::entry;
 
 #[entry]
 fn main() -> !{
-    let device_periphs = pac::Peripherals::take().unwrap();
-    let mut rcc = device_periphs.RCC.constrain();
+    let mcu_peripherals = pac::Peripherals::take().unwrap();
+    let mut rcc = mcu_peripherals.RCC.constrain();
 
-    let core_periphs = cortex_m::Peripherals::take().unwrap();
-    let mut flash = device_periphs.FLASH.constrain();
-    
+    let mut flash = mcu_peripherals.FLASH.constrain();
+    // let mut gpioa = mcu_peripherals.GPIO.split(&mut rcc.ahb);
+
     let clocks = rcc.cfgr.freeze(&mut flash.acr);
-    let mut delay = Delay::new(core_periphs.SYST, clocks);
 
     
     // initialize user leds
-    let mut gpioe = device_periphs.GPIOE.split(&mut rcc.ahb);
+    let mut gpioe = mcu_peripherals.GPIOE.split(&mut rcc.ahb);
     let leds = Leds::new(
         gpioe.pe8,
         gpioe.pe9,

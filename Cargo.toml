@@ -9,8 +9,8 @@ name = "rust-embedded-application-model"
 path = "src/main.rs"
 
 [lib]
-name = "compass_trail"
-path = "src/compass_trail.rs"
+name = "spi_communication"
+path = "src/spi_communication.rs"
 
 [dependencies]
 cortex-m = "0.6.4"
